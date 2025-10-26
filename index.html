@@ -3,13 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mythily Kanagaraj – AI/ML • Cloud • Business Intelligence</title>
-  <meta name="description" content="Portfolio of Mythily Kanagaraj – AI/ML, Cloud, and Business Intelligence projects, experience, and contact." />
+  <title>Mythily Kanagaraj – AI/ML • Cloud • Power BI</title>
+  <meta name="description" content="AI-first technologist: Advanced ML/LLMs, AWS/Azure, and enterprise analytics in Power BI." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
   <!-- Header -->
   <div class="header">
     <div class="container nav">
@@ -26,41 +25,42 @@
     </div>
   </div>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="container hero">
-    <div>
-      <span class="chip rise">Open to Data/AI/Cloud & BI roles</span>
-      <h1 class="title rise rise2">Building <span class="accent">intelligent</span> data products that drive <span class="accent">business impact</span>.</h1>
-      <p class="lead rise rise3">AI/ML & Cloud-Focused Business Analytics — turning complex data into clear, executive-ready outcomes.</p>
-      <div class="cta rise rise3">
-        <a class="btn shine" href="projects.html" aria-label="See Projects">See Projects</a>
-        <a class="btn outline" href="about.html" aria-label="Learn More">Learn More</a>
+    <div class="reveal">
+      <span class="chip">AI • Cloud • Analytics</span>
+      <h1 class="title">I build <span class="accent">applied AI</span> systems on cloud and deliver <span class="accent">decision intelligence</span> through analytics.</h1>
+      <p class="lead">Advanced ML/LLMs (fine-tuning & RAG), AWS/Azure data pipelines, and enterprise Power BI modeling — end-to-end from data to outcomes.</p>
+      <div class="cta">
+        <a class="btn shine" href="projects.html">See Projects</a>
+        <a class="btn outline" href="about.html">About Me</a>
       </div>
       <div style="margin-top:14px; color:var(--muted); font-size:14px; display:flex; gap:16px; flex-wrap:wrap">
-        <span>📍 Tampa, FL, USA</span>
+        <span>📍 Tampa, FL</span>
         <a href="mailto:mythilykanagaraj21@gmail.com">✉️ mythilykanagaraj21@gmail.com</a>
         <a href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200/" target="_blank">LinkedIn</a>
         <a href="https://github.com/Mythily2110" target="_blank">GitHub</a>
       </div>
     </div>
-
-    <div class="hero-card">
-      <div class="hero-grid">
-        <div class="mini">
-          <h4>Cloud & Data Engineering</h4>
-          <p>AWS/Azure ETL/ELT, infrastructure as code, and real-time data monitoring.</p>
-        </div>
-        <div class="mini">
-          <h4>Business Intelligence</h4>
-          <p>Power BI/Tableau, DAX, storytelling dashboards, and star schema models.</p>
-        </div>
-        <div class="mini">
-          <h4>Applied AI/ML</h4>
-          <p>TensorFlow, Keras, and Scikit-learn for NLP and anomaly detection.</p>
-        </div>
-        <div class="mini">
-          <h4>Observability & Compliance</h4>
-          <p>CloudWatch, Config, CloudTrail, and automated alerts.</p>
+    <div class="reveal">
+      <div class="card">
+        <div class="grid" style="grid-template-columns:1fr 1fr;gap:14px">
+          <div>
+            <h4 style="margin:0 0 4px">AI & LLMs</h4>
+            <p class="list" style="padding-left:0">Fine-tuning • Embeddings • RAG • TensorFlow/Keras • sklearn</p>
+          </div>
+          <div>
+            <h4 style="margin:0 0 4px">Cloud</h4>
+            <p class="list" style="padding-left:0">AWS/Azure: EC2, S3, Lambda, Glue, API GW, RDS, VPC, ADF, Synapse</p>
+          </div>
+          <div>
+            <h4 style="margin:0 0 4px">Analytics</h4>
+            <p class="list" style="padding-left:0">Power BI (DAX, RLS, semantic) • Tableau storytelling</p>
+          </div>
+          <div>
+            <h4 style="margin:0 0 4px">Data</h4>
+            <p class="list" style="padding-left:0">Python (Pandas/NumPy/NLTK) • SQL • Modeling • Orchestration</p>
+          </div>
         </div>
       </div>
     </div>
@@ -68,9 +68,9 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap">
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
-      <div style="display:flex; gap:12px">
+      <div style="display:flex;gap:12px">
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
@@ -79,8 +79,12 @@
   </footer>
 
   <script>
+    // year + active nav + scroll reveal
     document.getElementById('year').textContent = new Date().getFullYear();
+    const here = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.navlinks a').forEach(a=>{ if(a.getAttribute('href')===here) a.classList.add('active') });
+    const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show') }), {threshold:.2});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
-
 </body>
 </html>
