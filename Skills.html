@@ -1,0 +1,56 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skills – Mythily Kanagaraj</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+
+<div class="header"><div class="container nav">
+  <div class="brand">Mythily Kanagaraj</div>
+  <nav class="navlinks" aria-label="Primary">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="education.html">Education</a><a href="contact.html">Contact</a>
+  </nav>
+</div></div>
+
+<section class="container">
+  <div class="kicker">Toolbox</div>
+  <h1 class="h2">Skills</h1>
+
+  <div class="card">
+    <h3 style="margin:0 0 10px">AI/ML</h3>
+    <div class="chips">
+      <span class="chip-skill">TensorFlow</span><span class="chip-skill">Keras</span><span class="chip-skill">PyTorch</span>
+      <span class="chip-skill">scikit-learn</span><span class="chip-skill">NLP</span><span class="chip-skill">Predictive Modeling</span>
+      <span class="chip-skill">Hugging Face</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin:0 0 10px">Programming</h3>
+    <div class="chips">
+      <span class="chip-skill">Python (Pandas/NumPy/NLTK)</span><span class="chip-skill">SQL/PLSQL</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin:0 0 10px">BI & Visualization</h3>
+    <div class="chips">
+      <span class="chip-skill">Power BI (DAX/RLS)</span><span class="chip-skill">Tableau</span><span class="chip-skill">Star Schema</span>
+      <span class="chip-skill">Time Intelligence</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3 style="margin:0 0 10px">Cloud & Data</h3>
+    <div class="chips">
+      <span class="chip-skill">AWS (EC2/S3/Lambda/CloudWatch)</span><span class="chip-skill">Azure</span>
+      <span class="chip-skill">ETL/ELT</span><span class="chip-skill">Streamlit</span>
+    </div>
+  </div>
+</section>
+
+<footer>…</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();
+const here=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.navlinks a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active');});</script>
+</body></html>
