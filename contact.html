@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact – Mythily Kanagaraj</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+
+<div class="header"><div class="container nav">
+  <div class="brand">Mythily Kanagaraj</div>
+  <nav class="navlinks" aria-label="Primary">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="education.html">Education</a><a href="contact.html">Contact</a>
+  </nav>
+</div></div>
+
+<section class="container">
+  <div class="kicker">Let’s Talk</div>
+  <h1 class="h2">Contact</h1>
+  <div class="grid contact-grid">
+    <div class="card">
+      <h3 style="margin:0 0 8px">Collaborations, internships, or full-time roles</h3>
+      <p style="color:var(--muted);line-height:1.7">Happy to share code, dashboards, or discuss how I can help deliver outcomes for your team. Email is best; I’ll reply promptly.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;color:var(--muted)">
+        <a href="mailto:mythilykanagaraj21@gmail.com">✉️ Email</a>
+        <a href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/Mythily2110" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Replace ACTION with your Formspree endpoint -->
+    <form class="card" action="https://formspree.io/f/REPLACE_WITH_YOUR_ENDPOINT" method="POST">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+        <input class="field" type="text" name="name" placeholder="Your name" required>
+        <input class="field" type="email" name="_replyto" placeholder="Email address" required>
+        <textarea class="field" name="message" placeholder="Tell me about your project or role…" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </div>
+      <input type="hidden" name="_subject" value="Portfolio Contact">
+    </form>
+  </div>
+</section>
+
+<footer>…</footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();
+const here=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.navlinks a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active');});</script>
+</body></html>
