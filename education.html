@@ -1,10 +1,9 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Education – Mythily Kanagaraj</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head><body>
-
 <div class="header"><div class="container nav">
   <div class="brand">Mythily Kanagaraj</div>
   <nav class="navlinks" aria-label="Primary">
@@ -13,23 +12,31 @@
   </nav>
 </div></div>
 
-<section class="container">
+<section class="container reveal">
   <div class="kicker">Academics</div>
   <h1 class="h2">Education</h1>
 
   <article class="card">
     <h3 style="margin:0 0 6px">University of South Florida</h3>
-    <div style="color:var(--muted)">MS in Artificial Intelligence & Business Analytics · Jan 2025 – Present</div>
+    <div style="color:var(--muted)">M.S. – Artificial Intelligence & Business Analytics · Jan 2025 – Present</div>
     <ul class="list">
-      <li>Focus: data engineering, ML (NLP & forecasting), and BI storytelling for decision support.</li>
-      <li>Projects: Emotion Detection Chatbot (TensorFlow/Keras), Retail Insights (Tableau + Python/SQL).</li>
+      <li>Focus: advanced ML/LLMs, data engineering on cloud, Power BI modeling.</li>
+      <li>Projects: Emotion Detection (LSTM/TF), retail analytics dashboard (Tableau, Python/SQL).</li>
     </ul>
   </article>
-
-  <!-- Add prior education here if applicable -->
 </section>
 
-<footer>…</footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();
-const here=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.navlinks a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active');});</script>
+<footer>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
+    <div style="display:flex;gap:12px"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const here=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.navlinks a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active')});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.2});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body></html>
