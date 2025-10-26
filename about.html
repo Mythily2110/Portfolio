@@ -1,53 +1,127 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About – Mythily Kanagaraj</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head><body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About – Mythily Kanagaraj</title>
+  <meta name="description" content="About Mythily Kanagaraj — AI-first technologist with cloud and Power BI depth." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<!-- Header (same as index) -->
-<div class="header"><div class="container nav">
-  <div class="brand">Mythily Kanagaraj</div>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a>
-    <a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="contact.html">Contact</a>
-  </nav>
-</div></div>
-
-<section class="container">
-  <div class="kicker">Profile</div>
-  <h1 class="h2">About</h1>
-  <div class="grid about">
-    <div class="card">
-      <p style="color:var(--muted);line-height:1.8">
-        I’m a graduate student at USF focusing on Artificial Intelligence & Business Analytics. I build end-to-end
-        data products—clean ETL/ELT pipelines, reliable data models, ML systems (NLP & forecasting), and BI dashboards
-        in Power BI/Tableau that leaders actually use. I care about measurable impact (latency ↓, cost ↓, accuracy ↑)
-        and clear stakeholder storytelling.
-      </p>
-      <p style="color:var(--muted);line-height:1.8">
-        Recent highlights: an LSTM emotion-detection chatbot deployed on Hugging Face Spaces, a retail insights dashboard
-        with Python/SQL + Tableau, and an AWS compliance monitor with CloudWatch/Config/CloudTrail feeding executive views.
-      </p>
-      <div class="badges" style="margin-top:12px">
-        <span class="badge">AI/ML</span><span class="badge alt">Cloud</span><span class="badge">Data Engineering</span>
-        <span class="badge">Business Intelligence</span><span class="badge">Dashboard Storytelling</span>
-      </div>
-    </div>
-    <div class="card">
-      <h3 style="margin:0 0 8px">Quick Stats</h3>
-      <ul class="list">
-        <li>Cloud: AWS (EC2, S3, Lambda, CloudWatch, IaC), Azure</li>
-        <li>BI: Power BI (DAX, RLS, star schema), Tableau</li>
-        <li>AI/ML: TensorFlow/Keras, scikit-learn, NLP</li>
-        <li>Data: SQL/PLSQL, Python (Pandas, NumPy, NLTK)</li>
-      </ul>
+  <!-- Header -->
+  <div class="header">
+    <div class="container nav">
+      <div class="brand">Mythily Kanagaraj</div>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </div>
-</section>
 
-<!-- Footer (same as index) -->
-<footer>…same footer as index.html…</footer>
-<script>/* same tiny script as index */document.getElementById('year').textContent=new Date().getFullYear();
-const here=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.navlinks a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active');});</script>
-</body></html>
+  <!-- About -->
+  <section class="container">
+    <div class="kicker">About</div>
+    <h1 class="h2">Who I Am</h1>
+    <div class="card">
+      <p style="color:var(--muted);line-height:1.75">
+        I am an AI-first technologist with a foundation in cloud engineering and applied analytics, currently pursuing a Master’s in Artificial Intelligence &amp; Business Analytics.
+        My work focuses on building practical, end-to-end AI systems — from data acquisition and preparation to model development, deployment, and insight delivery.
+      </p>
+      <p style="color:var(--muted);line-height:1.75">
+        I specialize in applied machine learning and LLM-driven intelligence, supported by production-oriented cloud infrastructure. This background lets me move fluently across
+        model development, scalable architecture, and analytical presentation — bridging the gap between experimentation and real-world use.
+      </p>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="kicker">Technical Focus</div>
+    <h2 class="h2">AI-First Hybrid</h2>
+    <div class="grid about">
+      <div class="card">
+        <h3 style="margin:0 0 8px">AI &amp; Machine Learning (Advanced)</h3>
+        <p style="color:var(--muted);line-height:1.7">
+          Applied AI with emphasis on NLP, LLMs, and fine-tuning workflows. Deep learning with TensorFlow/Keras and classical ML with scikit-learn,
+          combined with embeddings, evaluation pipelines, and lightweight deployment. Retrieval-Augmented Generation (RAG) where context integration is needed.
+        </p>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 8px">Cloud &amp; Data Engineering</h3>
+        <p style="color:var(--muted);line-height:1.7">
+          Operationalizing intelligence on AWS and Azure. AWS experience includes EC2, S3, Lambda, CloudWatch, IAM, RDS, API Gateway, Glue, and VPC.
+          Azure experience includes Data Factory, Synapse, Functions, and Monitor. Goal: turn models into callable, observable services.
+        </p>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 8px">Analytics &amp; BI (Power BI-oriented)</h3>
+        <p style="color:var(--muted);line-height:1.7">
+          Power BI for semantic modeling, DAX time intelligence, row-level security, bookmarks, drillthrough, deployment pipelines, and Power Query.
+          Tableau for data storytelling and visual layering. Focus on clear KPIs and decision-ready delivery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="kicker">Approach</div>
+    <h2 class="h2">How I Build</h2>
+    <div class="card">
+      <ol class="list" style="margin:0;color:var(--muted)">
+        <li><strong style="color:var(--text)">Data engineering</strong> — acquisition, validation, transformation.</li>
+        <li><strong style="color:var(--text)">Modeling</strong> — classical ML, deep learning, or LLM fine-tuning based on problem fit.</li>
+        <li><strong style="color:var(--text)">Cloud delivery</strong> — package models into callable, observable services.</li>
+        <li><strong style="color:var(--text)">Analytics layer</strong> — surface intelligence via BI for stakeholders.</li>
+        <li><strong style="color:var(--text)">Iteration</strong> — evaluate, improve, and monitor in production.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="kicker">Toolbox</div>
+    <h2 class="h2">Tools &amp; Technologies</h2>
+    <div class="card">
+      <ul class="list">
+        <li><strong style="color:var(--text)">AI/ML:</strong> TensorFlow, Keras, scikit-learn, NLP, embeddings, LLM integration, fine-tuning, preprocessing pipelines, RAG concepts.</li>
+        <li><strong style="color:var(--text)">Cloud:</strong> AWS (EC2, S3, Lambda, IAM, RDS, Glue, API Gateway, CloudWatch, VPC), Azure (Data Factory, Synapse, Functions, Monitor).</li>
+        <li><strong style="color:var(--text)">Data:</strong> Python (Pandas, NumPy, NLTK), SQL, data modeling, pipeline orchestration.</li>
+        <li><strong style="color:var(--text)">Analytics:</strong> Power BI (DAX, semantic modeling, RLS, time intelligence, drillthrough, bookmarks, deployment pipelines, Power Query), Tableau.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="kicker">Direction</div>
+    <h2 class="h2">Career Interests</h2>
+    <div class="card">
+      <p style="color:var(--muted);line-height:1.7">
+        I am seeking internship opportunities that combine model development with real-world systems, cloud deployment, and analytical delivery —
+        environments where AI supports decision intelligence rather than standalone experiments.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
+      <div style="display:flex;gap:12px">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
