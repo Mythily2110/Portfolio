@@ -1,10 +1,9 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Skills – Mythily Kanagaraj</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head><body>
-
 <div class="header"><div class="container nav">
   <div class="brand">Mythily Kanagaraj</div>
   <nav class="navlinks" aria-label="Primary">
@@ -13,44 +12,47 @@
   </nav>
 </div></div>
 
-<section class="container">
+<section class="container reveal">
   <div class="kicker">Toolbox</div>
   <h1 class="h2">Skills</h1>
 
-  <div class="card">
-    <h3 style="margin:0 0 10px">AI/ML</h3>
+  <div class="card"><h3 style="margin:0 0 8px">AI / Machine Learning</h3>
     <div class="chips">
-      <span class="chip-skill">TensorFlow</span><span class="chip-skill">Keras</span><span class="chip-skill">PyTorch</span>
-      <span class="chip-skill">scikit-learn</span><span class="chip-skill">NLP</span><span class="chip-skill">Predictive Modeling</span>
-      <span class="chip-skill">Hugging Face</span>
+      <span class="chip-skill">LLMs</span><span class="chip-skill">Fine-tuning</span><span class="chip-skill">Embeddings</span><span class="chip-skill">RAG</span>
+      <span class="chip-skill">NLP</span><span class="chip-skill">TensorFlow</span><span class="chip-skill">Keras</span><span class="chip-skill">scikit-learn</span>
+      <span class="chip-skill">Preprocessing</span><span class="chip-skill">Evaluation Pipelines</span><span class="chip-skill">Streamlit</span><span class="chip-skill">Hugging Face</span>
     </div>
   </div>
 
-  <div class="card">
-    <h3 style="margin:0 0 10px">Programming</h3>
+  <div class="card"><h3 style="margin:0 0 8px">Cloud & Data Engineering</h3>
     <div class="chips">
-      <span class="chip-skill">Python (Pandas/NumPy/NLTK)</span><span class="chip-skill">SQL/PLSQL</span>
+      <span class="chip-skill">AWS EC2</span><span class="chip-skill">S3</span><span class="chip-skill">Lambda</span><span class="chip-skill">Glue</span>
+      <span class="chip-skill">API Gateway</span><span class="chip-skill">RDS</span><span class="chip-skill">VPC</span><span class="chip-skill">CloudWatch</span>
+      <span class="chip-skill">Azure Data Factory</span><span class="chip-skill">Synapse</span><span class="chip-skill">Functions</span><span class="chip-skill">Monitor</span>
+      <span class="chip-skill">Python</span><span class="chip-skill">SQL</span>
     </div>
   </div>
 
-  <div class="card">
-    <h3 style="margin:0 0 10px">BI & Visualization</h3>
+  <div class="card"><h3 style="margin:0 0 8px">Analytics & BI</h3>
     <div class="chips">
-      <span class="chip-skill">Power BI (DAX/RLS)</span><span class="chip-skill">Tableau</span><span class="chip-skill">Star Schema</span>
-      <span class="chip-skill">Time Intelligence</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3 style="margin:0 0 10px">Cloud & Data</h3>
-    <div class="chips">
-      <span class="chip-skill">AWS (EC2/S3/Lambda/CloudWatch)</span><span class="chip-skill">Azure</span>
-      <span class="chip-skill">ETL/ELT</span><span class="chip-skill">Streamlit</span>
+      <span class="chip-skill">Power BI (DAX)</span><span class="chip-skill">RLS</span><span class="chip-skill">Semantic Modeling</span>
+      <span class="chip-skill">Time Intelligence</span><span class="chip-skill">Drillthrough</span><span class="chip-skill">Bookmarks</span>
+      <span class="chip-skill">Deployment Pipelines</span><span class="chip-skill">Power Query</span><span class="chip-skill">Tableau</span>
     </div>
   </div>
 </section>
 
-<footer>…</footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();
-const here=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.navlinks a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active');});</script>
+<footer>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
+    <div style="display:flex;gap:12px"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const here=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.navlinks a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active')});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.2});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body></html>
