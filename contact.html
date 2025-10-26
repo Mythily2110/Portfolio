@@ -1,10 +1,9 @@
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact – Mythily Kanagaraj</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head><body>
-
 <div class="header"><div class="container nav">
   <div class="brand">Mythily Kanagaraj</div>
   <nav class="navlinks" aria-label="Primary">
@@ -13,7 +12,7 @@
   </nav>
 </div></div>
 
-<section class="container">
+<section class="container reveal">
   <div class="kicker">Let’s Talk</div>
   <h1 class="h2">Contact</h1>
   <div class="grid contact-grid">
@@ -27,8 +26,7 @@
       </div>
     </div>
 
-    <!-- Replace ACTION with your Formspree endpoint -->
-    <form class="card" action="https://formspree.io/f/REPLACE_WITH_YOUR_ENDPOINT" method="POST">
+    <form class="card" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT" method="POST">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
         <input class="field" type="text" name="name" placeholder="Your name" required>
         <input class="field" type="email" name="_replyto" placeholder="Email address" required>
@@ -36,11 +34,22 @@
         <button class="btn" type="submit">Send Message</button>
       </div>
       <input type="hidden" name="_subject" value="Portfolio Contact">
+      <p style="color:var(--muted);font-size:12px;margin-top:10px">Powered by Formspree.</p>
     </form>
   </div>
 </section>
 
-<footer>…</footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();
-const here=location.pathname.split('/').pop()||'index.html';document.querySelectorAll('.navlinks a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active');});</script>
+<footer>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
+    <div style="display:flex;gap:12px"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent=new Date().getFullYear();
+  const here=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.navlinks a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active')});
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.2});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
 </body></html>
