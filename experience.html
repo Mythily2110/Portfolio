@@ -1,62 +1,106 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Experience – Mythily Kanagaraj</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head><body>
-<div class="header"><div class="container nav">
-  <div class="brand">Mythily Kanagaraj</div>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a>
-    <a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="education.html">Education</a><a href="contact.html">Contact</a>
-  </nav>
-</div></div>
+<!doctype html>
+<html lang="en">
 
-<section class="container reveal">
-  <div class="kicker">Track Record</div>
-  <h1 class="h2">Experience</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experience – Mythily Kanagaraj</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
 
-  <!-- Core Professional Experience -->
-  <article class="card">
-    <header style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-      <h3 style="margin:0">Cloud Engineer · Infosys</h3>
-      <div style="color:var(--muted);font-size:14px">Nov 2021 – Jul 2024</div>
-    </header>
-    <ul class="list">
-      <li>Developed secure AWS infrastructure with <strong>EC2, S3, RDS, Lambda, VPC</strong>, aligning with best practices for isolation, availability, and cost efficiency.</li>
-      <li>Implemented <strong>automated compliance tracking</strong> and <strong>real-time anomaly detection</strong> using <strong>CloudWatch</strong> metrics/logs and IAM insights; integrated alerting for stakeholders.</li>
-      <li>Configured audit-ready baselines and enhanced cloud security through <strong>automated auditing pipelines</strong>, supporting cybersecurity algorithm development and predictive monitoring.</li>
-      <li>Built executive-facing <strong>Tableau dashboards</strong> to visualize compliance metrics, anomaly signals, and application health for data-driven decisions.</li>
-      <li>Partnered with analytics teams to design <strong>KPI frameworks</strong> and data models; supported BI delivery with reliable upstream data.</li>
-      <li>Practiced <strong>IaC/CI-CD</strong> and environment promotion to improve deployment speed and reliability.</li>
-    </ul>
-  </article>
-
-  <!-- Project Experience highlights shown on Experience page too -->
-  <article class="card">
-    <header style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-      <h3 style="margin:0">Selected Project Experience</h3>
-      <div style="color:var(--muted);font-size:14px">Academic & Independent</div>
-    </header>
-    <ul class="list">
-      <li><strong>Mental Health Emotion Detection Chatbot</strong> — Designed and deployed an <strong>LSTM-based NLP model</strong> with TensorFlow/Keras for multi-class emotion classification; integrated with <strong>Streamlit</strong> and <strong>Hugging Face Spaces</strong> for scalable, cloud-based interaction. Implemented NLP preprocessing (tokenization, stopword removal, stemming, lemmatization, sequence padding, label encoding). Conducted model training, hyperparameter tuning, and evaluation to optimize real-time accuracy; deployed as a Streamlit app enabling cloud-based predictive analytics for end users.</li>
-      <li><strong>Retail Customer Insights Dashboard</strong> — Built an interactive <strong>Tableau</strong> dashboard with <strong>Python</strong> preprocessing and <strong>SQL</strong> pipelines to support segmentation, sales trend analysis, and demand forecasting. Created dynamic KPI indicators (purchase frequency, loyalty, revenue) for real-time visibility; applied SQL+Python pipelines for predictive analytics and forecasting.</li>
-      <li><strong>Cloud Security & Compliance Monitoring</strong> — Designed an <strong>AWS monitoring baseline</strong> with event logs and metrics via CloudWatch and IAM; structured alerts for unusual activity; mapped findings into dashboard views for executive visibility.</li>
-    </ul>
-  </article>
-</section>
-
-<footer>
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-    <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
-    <div style="display:flex;gap:12px"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+<body>
+  <div class="header">
+    <div class="container nav">
+      <div class="brand">Mythily Kanagaraj</div>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="education.html">Education</a><a
+          href="contact.html">Contact</a>
+      </nav>
+    </div>
   </div>
-</footer>
-<script>
-  document.getElementById('year').textContent=new Date().getFullYear();
-  const here=location.pathname.split('/').pop()||'index.html';
-  document.querySelectorAll('.navlinks a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active')});
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.2});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
-</body></html>
+
+  <section class="container reveal">
+    <div class="kicker">Track Record</div>
+    <h1 class="h2">Experience</h1>
+
+    <!-- InnovateK12 - BI Developer Intern -->
+    <article class="card">
+      <header style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <h3 style="margin:0">BI Developer Intern · InnovateK12</h3>
+        <div style="color:var(--muted);font-size:14px">Sep 2025 – Dec 2025 · Sarasota, FL</div>
+      </header>
+      <ul class="list">
+        <li>Designed and automated cloud-connected dashboards using AWS services (S3, Athena/Redshift, QuickSight/Power
+          BI).</li>
+        <li>Built automated reporting pipelines transforming raw educational datasets into analytics-ready tables.</li>
+        <li>Developed KPI-driven dashboards for leadership stakeholders to enable faster insights and decisions.</li>
+        <li>Reduced manual reporting through dashboard automation and improved refresh reliability.</li>
+      </ul>
+    </article>
+
+    <!-- Infosys - Data Engineer -->
+    <article class="card">
+      <header style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <h3 style="margin:0">Data Engineer · Infosys</h3>
+        <div style="color:var(--muted);font-size:14px">Apr 2023 – Aug 2024</div>
+      </header>
+      <ul class="list">
+        <li>Built and automated CI/CD pipelines using GitHub Actions and MLflow for reproducible deployments and
+          artifact tracking.</li>
+        <li>Developed scalable batch and inference services using FastAPI, Docker, and Kubernetes (AWS EKS).</li>
+        <li>Implemented experimentation and statistical evaluation frameworks using Statsmodels and Bayesian inference.
+        </li>
+        <li>Optimized AWS Glue ETL pipelines to improve ingestion reliability and schema consistency.</li>
+      </ul>
+    </article>
+
+    <!-- Infosys - DevOps Engineer -->
+    <article class="card">
+      <header style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <h3 style="margin:0">DevOps Engineer (Client: Costco) · Infosys</h3>
+        <div style="color:var(--muted);font-size:14px">Nov 2021 – Dec 2022</div>
+      </header>
+      <ul class="list">
+        <li>Led client-facing discussions translating requirements into AWS/Azure architectures for ETL and analytics
+          pipelines.</li>
+        <li>Governed cloud-native data infrastructure with reliability, security, and cost controls.</li>
+        <li>Established CI/CD standards for ETL pipelines and analytics workflows with validation checks.</li>
+        <li>Operationalized monitoring, validation, and governance pipelines for analytics-ready datasets.</li>
+      </ul>
+    </article>
+
+    <!-- USF Research Assistant -->
+    <article class="card">
+      <header style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
+        <h3 style="margin:0">Research Assistant, Behavioral AI Lab · University of South Florida</h3>
+        <div style="color:var(--muted);font-size:14px">Jan 2025 – Present · Tampa, FL</div>
+      </header>
+      <ul class="list">
+        <li>Conduct research on human-AI interaction, trust, and user perception of AI systems.</li>
+        <li>Analyze behavioral patterns from AI usage data for decision-making and emotional impact.</li>
+        <li>Design and administer Qualtrics surveys for perception and sentiment data collection.</li>
+        <li>Support documentation and insight synthesis for reporting.</li>
+      </ul>
+    </article>
+  </section>
+
+  <footer>
+    <div class="container"
+      style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
+      <div style="display:flex;gap:12px"><a href="about.html">About</a><a href="projects.html">Projects</a><a
+          href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const here = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.navlinks a').forEach(a => { if (a.getAttribute('href') === here) a.classList.add('active') });
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .2 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>

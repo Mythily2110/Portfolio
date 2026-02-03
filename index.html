@@ -1,13 +1,16 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mythily Kanagaraj – AI/ML • Cloud • Power BI</title>
-  <meta name="description" content="AI-first technologist: Advanced ML/LLMs, AWS/Azure, and enterprise analytics in Power BI." />
+  <meta name="description"
+    content="AI-first technologist: Advanced ML/LLMs, AWS/Azure, and enterprise analytics in Power BI." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <!-- Header -->
   <div class="header">
@@ -28,9 +31,13 @@
   <!-- Hero -->
   <section class="container hero">
     <div class="reveal">
-      <span class="chip">AI • Cloud • Analytics</span>
-      <h1 class="title">I build <span class="accent">applied AI</span> systems on cloud and deliver <span class="accent">decision intelligence</span> through analytics.</h1>
-      <p class="lead">Advanced ML/LLMs (fine-tuning & RAG), AWS/Azure data pipelines, and enterprise Power BI modeling — end-to-end from data to outcomes.</p>
+      <span class="chip">Data Engineer • AI & Data Engineer • Analytics Engineer</span>
+      <h1 class="title">Building <span class="accent">cloud-native data pipelines</span> and <span
+          class="accent">AI-enabled systems</span> that deliver real business value.</h1>
+      <p class="lead">Data Engineer with 3+ years of experience in cloud-native data pipelines and AI-enabled systems
+        across AWS and Azure. Experienced in ETL workflows, SQL data modeling, NLP/ML pipeline support, and production
+        deployments using FastAPI, Docker, and Streamlit. Strong background in CI/CD automation, data governance, and
+        building scalable, analytics-ready platforms aligned with client and business needs.</p>
       <div class="cta">
         <a class="btn shine" href="projects.html">See Projects</a>
         <a class="btn outline" href="about.html">About Me</a>
@@ -38,6 +45,7 @@
       <div style="margin-top:14px; color:var(--muted); font-size:14px; display:flex; gap:16px; flex-wrap:wrap">
         <span>📍 Tampa, FL</span>
         <a href="mailto:mythilykanagaraj21@gmail.com">✉️ mythilykanagaraj21@gmail.com</a>
+        <span>📞 +1-813-323-3780</span>
         <a href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200/" target="_blank">LinkedIn</a>
         <a href="https://github.com/Mythily2110" target="_blank">GitHub</a>
       </div>
@@ -46,20 +54,23 @@
       <div class="card">
         <div class="grid" style="grid-template-columns:1fr 1fr;gap:14px">
           <div>
-            <h4 style="margin:0 0 4px">AI & LLMs</h4>
-            <p class="list" style="padding-left:0">Fine-tuning • Embeddings • RAG • TensorFlow/Keras • sklearn</p>
+            <h4 style="margin:0 0 4px">Programming</h4>
+            <p class="list" style="padding-left:0">Python • JavaScript • PostgreSQL • MySQL</p>
           </div>
           <div>
-            <h4 style="margin:0 0 4px">Cloud</h4>
-            <p class="list" style="padding-left:0">AWS/Azure: EC2, S3, Lambda, Glue, API GW, RDS, VPC, ADF, Synapse</p>
+            <h4 style="margin:0 0 4px">Data/ETL</h4>
+            <p class="list" style="padding-left:0">AWS Glue, Lambda, S3, Redshift, Kinesis • Azure Data Factory,
+              Databricks, AKS, Azure DevOps • Snowflake</p>
           </div>
           <div>
-            <h4 style="margin:0 0 4px">Analytics</h4>
-            <p class="list" style="padding-left:0">Power BI (DAX, RLS, semantic) • Tableau storytelling</p>
+            <h4 style="margin:0 0 4px">ML/AI</h4>
+            <p class="list" style="padding-left:0">PyTorch • TensorFlow • scikit-learn • XGBoost • Transformer Models •
+              NLP</p>
           </div>
           <div>
-            <h4 style="margin:0 0 4px">Data</h4>
-            <p class="list" style="padding-left:0">Python (Pandas/NumPy/NLTK) • SQL • Modeling • Orchestration</p>
+            <h4 style="margin:0 0 4px">BI & DevOps</h4>
+            <p class="list" style="padding-left:0">Tableau, Power BI, QuickSight • Docker, Kubernetes, CI/CD, GitHub
+              Actions, MLflow</p>
           </div>
         </div>
       </div>
@@ -68,7 +79,8 @@
 
   <!-- Footer -->
   <footer>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div class="container"
+      style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
       <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
       <div style="display:flex;gap:12px">
         <a href="about.html">About</a>
@@ -82,9 +94,10 @@
     // year + active nav + scroll reveal
     document.getElementById('year').textContent = new Date().getFullYear();
     const here = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.navlinks a').forEach(a=>{ if(a.getAttribute('href')===here) a.classList.add('active') });
-    const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('show') }), {threshold:.2});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    document.querySelectorAll('.navlinks a').forEach(a => { if (a.getAttribute('href') === here) a.classList.add('active') });
+    const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .2 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
 </body>
+
 </html>

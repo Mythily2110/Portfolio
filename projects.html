@@ -1,78 +1,69 @@
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Projects – Mythily Kanagaraj</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head><body>
-<div class="header"><div class="container nav">
-  <div class="brand">Mythily Kanagaraj</div>
-  <nav class="navlinks" aria-label="Primary">
-    <a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a>
-    <a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="education.html">Education</a><a href="contact.html">Contact</a>
-  </nav>
-</div></div>
+<!doctype html>
+<html lang="en">
 
-<section class="container reveal">
-  <div class="kicker">Selected Work</div>
-  <h1 class="h2">Projects</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects – Mythily Kanagaraj</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
 
-  <div class="grid projects">
-    <!-- Chatbot -->
-    <div class="card">
-      <div class="badges">
-        <span class="badge">TensorFlow</span><span class="badge">Keras</span><span class="badge">NLP</span>
-        <span class="badge">Streamlit</span><span class="badge">Hugging Face</span>
-      </div>
-      <h3 class="proj-title" style="margin:8px 0">Mental Health Emotion Detection Chatbot</h3>
-      <ul class="list">
-        <li>Designed and deployed an <strong>LSTM-based NLP model</strong> with TensorFlow/Keras for <strong>multi-class emotion classification</strong>, integrated with Streamlit and Hugging Face Spaces for scalable, cloud-based interaction.</li>
-        <li>Implemented NLP preprocessing: tokenization, stopword removal, stemming, lemmatization, sequence padding, and label encoding.</li>
-        <li>Conducted model training, hyperparameter tuning, and evaluation to optimize accuracy for real-time emotion detection.</li>
-        <li>Deployed as a <strong>Streamlit</strong> application on <strong>Hugging Face Spaces</strong>, enabling cloud-based predictive analytics for end-user interaction.</li>
-      </ul>
-      <div class="cta" style="margin-top:10px">
-        <a class="btn outline" target="_blank" rel="noreferrer" href="https://lnkd.in/g6VnvT8j">Code (GitHub)</a>
-      </div>
-    </div>
-
-    <!-- Retail Customer Insights -->
-    <div class="card">
-      <div class="badges"><span class="badge">Tableau</span><span class="badge">Python</span><span class="badge">SQL</span><span class="badge">Forecasting</span></div>
-      <h3 class="proj-title" style="margin:8px 0">Retail Customer Insights Dashboard</h3>
-      <ul class="list">
-        <li>Built an interactive <strong>Tableau</strong> dashboard with <strong>Python</strong> preprocessing and <strong>SQL</strong> pipelines to support customer segmentation, sales trend analysis, and demand forecasting for retail optimization.</li>
-        <li>Used Python (Pandas, NumPy) for data preprocessing, transformation, and feature engineering, ensuring clean and analytics-ready datasets.</li>
-        <li>Designed dynamic <strong>KPI indicators</strong> (purchase frequency, customer loyalty, sales revenue) for real-time visibility into performance.</li>
-        <li>Applied SQL queries and Python pipelines to support predictive analytics and forecasting, improving data-driven decisions in retail and supply chain.</li>
-      </ul>
-      <!-- Add your LinkedIn post/screenshot link when ready -->
-      <!-- <div class="cta" style="margin-top:10px"><a class="btn outline" href="YOUR_LINKEDIN_POST_URL" target="_blank">View Screenshot</a></div> -->
-    </div>
-
-    <!-- Cloud Security & Compliance -->
-    <div class="card">
-      <div class="badges"><span class="badge">AWS</span><span class="badge">Tableau</span><span class="badge">SQL</span><span class="badge">Security</span></div>
-      <h3 class="proj-title" style="margin:8px 0">Cloud Security & Compliance Monitoring</h3>
-      <ul class="list">
-        <li>Developed a secure <strong>AWS infrastructure</strong> (EC2, S3, RDS, Lambda, VPC) with automated compliance tracking and real-time anomaly detection.</li>
-        <li>Built <strong>Tableau dashboards</strong> to visualize compliance metrics, anomaly detection, and application health for stakeholder decision-making.</li>
-        <li>Enhanced cloud security via <strong>automated auditing pipelines</strong>, aligning with cybersecurity algorithm development and predictive monitoring.</li>
-      </ul>
+<body>
+  <div class="header">
+    <div class="container nav">
+      <div class="brand">Mythily Kanagaraj</div>
+      <nav class="navlinks" aria-label="Primary">
+        <a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="education.html">Education</a><a
+          href="contact.html">Contact</a>
+      </nav>
     </div>
   </div>
-</section>
 
-<footer>
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
-    <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
-    <div style="display:flex;gap:12px"><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
-  </div>
-</footer>
-<script>
-  document.getElementById('year').textContent=new Date().getFullYear();
-  const here=location.pathname.split('/').pop()||'index.html';
-  document.querySelectorAll('.navlinks a').forEach(a=>{if(a.getAttribute('href')===here)a.classList.add('active')});
-  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.2});
-  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-</script>
-</body></html>
+  <section class="container reveal">
+    <div class="kicker">Selected Work</div>
+    <h1 class="h2">Projects</h1>
+
+    <div class="grid projects">
+      <!-- ClarityCoach - AI Mental Health Chatbot -->
+      <div class="card">
+        <div class="badges">
+          <span class="badge">Python</span><span class="badge">Streamlit</span><span class="badge">NLP</span>
+          <span class="badge">LLMs</span><span class="badge">spaCy</span><span class="badge">scikit-learn</span>
+        </div>
+        <h3 class="proj-title" style="margin:8px 0">ClarityCoach — AI Mental Health Chatbot</h3>
+        <ul class="list">
+          <li>Built an <strong>end-to-end mental health AI chatbot</strong> using Python and Streamlit with
+            <strong>LLM-based sentiment analysis</strong> for real-time responses.</li>
+          <li>Implemented NLP pipelines using <strong>spaCy, scikit-learn, TF-IDF, transformer embeddings</strong> to
+            detect intent and emotion.</li>
+          <li>Designed <strong>secure journaling storage</strong> using SQLModel and deployed prototypes using
+            <strong>Hugging Face Spaces / Streamlit Cloud</strong> with responsible AI practices.</li>
+        </ul>
+        <div class="cta" style="margin-top:10px">
+          <a class="btn outline" target="_blank" rel="noreferrer"
+            href="https://github.com/Mythily2110/ClarityCoach">View on GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container"
+      style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
+      <div style="display:flex;gap:12px"><a href="about.html">About</a><a href="projects.html">Projects</a><a
+          href="contact.html">Contact</a></div>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const here = location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.navlinks a').forEach(a => { if (a.getAttribute('href') === here) a.classList.add('active') });
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .2 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+
+</html>
