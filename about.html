@@ -38,25 +38,35 @@
     <div class="kicker">About Me</div>
 
     <!-- Profile header -->
-    <div style="display:flex;align-items:center;gap:32px;margin-bottom:40px;flex-wrap:wrap">
-      <!-- Photo -->
-      <div style="flex-shrink:0">
-        <div style="width:140px;height:140px;border-radius:50%;padding:3px;background:linear-gradient(135deg,var(--accent),var(--accent2))">
-          <img src="P1010863.jpg" alt="Mythily Kanagaraj"
-            style="width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center 15%;display:block;border:3px solid var(--bg)">
-        </div>
+    <div style="display:flex;align-items:center;gap:36px;margin-bottom:44px;flex-wrap:wrap">
+
+      <!-- Photo — no absolute children, clean circle -->
+      <div style="flex-shrink:0;width:148px;height:148px;border-radius:50%;padding:3px;
+                  background:linear-gradient(135deg,var(--accent),var(--accent2))">
+        <img src="profile.jpg" alt="Mythily Kanagaraj"
+          style="width:100%;height:100%;border-radius:50%;object-fit:cover;
+                 object-position:center top;display:block;
+                 border:3px solid var(--bg);">
       </div>
+
       <!-- Info -->
-      <div>
-        <h1 style="font-size:clamp(26px,4vw,42px);font-weight:800;letter-spacing:-.4px;margin-bottom:6px">Mythily Kanagaraj</h1>
-        <p style="font-size:15px;color:var(--muted);margin-bottom:14px">AI/ML Engineer · Research Assistant · M.S. AI &amp; Business Analytics</p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <h1 style="font-size:clamp(26px,4vw,44px);font-weight:800;letter-spacing:-.5px;line-height:1.1;margin:0">
+          Mythily Kanagaraj
+        </h1>
+        <p style="font-size:15px;color:var(--muted);margin:0">
+          AI/ML Engineer · Research Assistant · M.S. AI &amp; Business Analytics
+        </p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:2px">
           <span class="tag">InnovateK12</span>
           <span class="tag teal">USF Behavioral AI Lab</span>
           <span class="tag green">Tampa, FL</span>
-          <span class="status-badge status-live"><span class="dot"></span> Available</span>
+          <span class="status-badge status-live" style="margin-left:4px">
+            <span class="dot"></span> Available
+          </span>
         </div>
       </div>
+
     </div>
 
     <div class="grid grid-2" style="align-items:start;gap:28px">
