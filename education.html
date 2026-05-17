@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <canvas id="neural-canvas" aria-hidden="true"></canvas>
 
   <div class="header">
     <div class="container nav">
@@ -102,5 +103,6 @@
     const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .15 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
+  <script src="neural.js"></script>
 </body>
 </html>
