@@ -1,106 +1,166 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Experience – Mythily Kanagaraj</title>
+  <meta name="description" content="Work experience of Mythily Kanagaraj — Data Engineer, DevOps, BI Developer, and Research Assistant." />
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
   <div class="header">
     <div class="container nav">
       <div class="brand">Mythily Kanagaraj</div>
       <nav class="navlinks" aria-label="Primary">
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a>
-        <a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="education.html">Education</a><a
-          href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <section class="container reveal">
     <div class="kicker">Track Record</div>
     <h1 class="h2">Experience</h1>
 
-    <!-- InnovateK12 - BI Developer Intern -->
-    <article class="card">
-      <header style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-        <h3 style="margin:0">BI Developer Intern · InnovateK12</h3>
-        <div style="color:var(--muted);font-size:14px">Sep 2025 – Dec 2025 · Sarasota, FL</div>
-      </header>
-      <ul class="list">
-        <li>Designed and automated cloud-connected dashboards using AWS services (S3, Athena/Redshift, QuickSight/Power
-          BI).</li>
-        <li>Built automated reporting pipelines transforming raw educational datasets into analytics-ready tables.</li>
-        <li>Developed KPI-driven dashboards for leadership stakeholders to enable faster insights and decisions.</li>
-        <li>Reduced manual reporting through dashboard automation and improved refresh reliability.</li>
-      </ul>
-    </article>
+    <div class="timeline">
 
-    <!-- Infosys - Data Engineer -->
-    <article class="card">
-      <header style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-        <h3 style="margin:0">Data Engineer · Infosys</h3>
-        <div style="color:var(--muted);font-size:14px">Apr 2023 – Aug 2024</div>
-      </header>
-      <ul class="list">
-        <li>Built and automated CI/CD pipelines using GitHub Actions and MLflow for reproducible deployments and
-          artifact tracking.</li>
-        <li>Developed scalable batch and inference services using FastAPI, Docker, and Kubernetes (AWS EKS).</li>
-        <li>Implemented experimentation and statistical evaluation frameworks using Statsmodels and Bayesian inference.
-        </li>
-        <li>Optimized AWS Glue ETL pipelines to improve ingestion reliability and schema consistency.</li>
-      </ul>
-    </article>
+      <!-- Research Assistant -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body card">
+          <div class="tl-header">
+            <div>
+              <div class="tl-title">Research Assistant, Behavioral AI Lab</div>
+              <div class="tl-org">University of South Florida</div>
+            </div>
+            <div>
+              <div class="tl-date">Jan 2025 – Present · Tampa, FL</div>
+              <span class="status-badge status-live" style="margin-top:6px;display:inline-flex"><span class="dot"></span> Current</span>
+            </div>
+          </div>
+          <ul class="proj-list">
+            <li>Conduct research on <strong>human-AI interaction</strong>, trust, and user perception of AI systems</li>
+            <li>Analyze behavioral patterns from AI usage data to study decision-making and emotional impact</li>
+            <li>Design and administer <strong>Qualtrics surveys</strong> for perception and sentiment data collection</li>
+            <li>Support documentation and insight synthesis for academic reporting</li>
+          </ul>
+          <div class="tags" style="margin-top:14px">
+            <span class="tag">Behavioral AI</span><span class="tag teal">Research</span><span class="tag">Qualtrics</span>
+          </div>
+        </div>
+      </div>
 
-    <!-- Infosys - DevOps Engineer -->
-    <article class="card">
-      <header style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-        <h3 style="margin:0">DevOps Engineer (Client: Costco) · Infosys</h3>
-        <div style="color:var(--muted);font-size:14px">Nov 2021 – Dec 2022</div>
-      </header>
-      <ul class="list">
-        <li>Led client-facing discussions translating requirements into AWS/Azure architectures for ETL and analytics
-          pipelines.</li>
-        <li>Governed cloud-native data infrastructure with reliability, security, and cost controls.</li>
-        <li>Established CI/CD standards for ETL pipelines and analytics workflows with validation checks.</li>
-        <li>Operationalized monitoring, validation, and governance pipelines for analytics-ready datasets.</li>
-      </ul>
-    </article>
+      <!-- InnovateK12 -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body card">
+          <div class="tl-header">
+            <div>
+              <div class="tl-title">BI Developer Intern</div>
+              <div class="tl-org">InnovateK12</div>
+            </div>
+            <div class="tl-date">Sep 2025 – Dec 2025 · Sarasota, FL</div>
+          </div>
+          <ul class="proj-list">
+            <li>Designed and automated cloud-connected dashboards using <strong>AWS S3, Athena/Redshift, QuickSight/Power BI</strong></li>
+            <li>Built automated reporting pipelines transforming raw educational datasets into analytics-ready tables</li>
+            <li>Developed <strong>KPI-driven dashboards</strong> for leadership stakeholders to enable faster insights and decisions</li>
+            <li>Reduced manual reporting through dashboard automation and improved refresh reliability</li>
+          </ul>
+          <div class="tags" style="margin-top:14px">
+            <span class="tag">AWS</span><span class="tag">Power BI</span><span class="tag">QuickSight</span><span class="tag teal">ETL</span>
+          </div>
+        </div>
+      </div>
 
-    <!-- USF Research Assistant -->
-    <article class="card">
-      <header style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-        <h3 style="margin:0">Research Assistant, Behavioral AI Lab · University of South Florida</h3>
-        <div style="color:var(--muted);font-size:14px">Jan 2025 – Present · Tampa, FL</div>
-      </header>
-      <ul class="list">
-        <li>Conduct research on human-AI interaction, trust, and user perception of AI systems.</li>
-        <li>Analyze behavioral patterns from AI usage data for decision-making and emotional impact.</li>
-        <li>Design and administer Qualtrics surveys for perception and sentiment data collection.</li>
-        <li>Support documentation and insight synthesis for reporting.</li>
-      </ul>
-    </article>
+      <!-- Infosys Data Engineer -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body card">
+          <div class="tl-header">
+            <div>
+              <div class="tl-title">Data Engineer</div>
+              <div class="tl-org">Infosys</div>
+            </div>
+            <div class="tl-date">Apr 2023 – Aug 2024</div>
+          </div>
+          <ul class="proj-list">
+            <li>Built and automated <strong>CI/CD pipelines</strong> using GitHub Actions and MLflow for reproducible deployments and artifact tracking</li>
+            <li>Developed scalable batch and inference services using <strong>FastAPI, Docker, and Kubernetes (AWS EKS)</strong></li>
+            <li>Implemented experimentation and statistical evaluation frameworks using <strong>Statsmodels and Bayesian inference</strong></li>
+            <li>Optimized <strong>AWS Glue ETL pipelines</strong> to improve ingestion reliability and schema consistency</li>
+          </ul>
+          <div class="tags" style="margin-top:14px">
+            <span class="tag">AWS Glue</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">Kubernetes</span><span class="tag">MLflow</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infosys DevOps -->
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-body card">
+          <div class="tl-header">
+            <div>
+              <div class="tl-title">DevOps Engineer <span style="font-weight:400;color:var(--subtle)">(Client: Costco)</span></div>
+              <div class="tl-org">Infosys</div>
+            </div>
+            <div class="tl-date">Nov 2021 – Dec 2022</div>
+          </div>
+          <ul class="proj-list">
+            <li>Led client-facing discussions translating requirements into <strong>AWS/Azure architectures</strong> for ETL and analytics pipelines</li>
+            <li>Governed cloud-native data infrastructure with reliability, security, and cost controls</li>
+            <li>Established <strong>CI/CD standards</strong> for ETL pipelines and analytics workflows with validation checks</li>
+            <li>Operationalized monitoring, validation, and governance pipelines for analytics-ready datasets</li>
+          </ul>
+          <div class="tags" style="margin-top:14px">
+            <span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">CI/CD</span><span class="tag teal">Data Governance</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <footer>
-    <div class="container"
-      style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div class="container footer-inner">
       <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
-      <div style="display:flex;gap:12px"><a href="about.html">About</a><a href="projects.html">Projects</a><a
-          href="contact.html">Contact</a></div>
+      <div style="display:flex;gap:16px">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const here = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.navlinks a').forEach(a => { if (a.getAttribute('href') === here) a.classList.add('active') });
-    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .2 });
+    document.querySelectorAll('.navlinks a, .mobile-menu a').forEach(a => { if (a.getAttribute('href') === here) a.classList.add('active') });
+    const ham = document.getElementById('hamburger');
+    const mob = document.getElementById('mobileMenu');
+    ham.addEventListener('click', () => { ham.classList.toggle('open'); mob.classList.toggle('open') });
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
 </body>
-
 </html>

@@ -1,71 +1,114 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact – Mythily Kanagaraj</title>
+  <meta name="description" content="Contact Mythily Kanagaraj — open to Data Engineer, AI & Data Engineer, and Analytics Engineer roles." />
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
   <div class="header">
     <div class="container nav">
       <div class="brand">Mythily Kanagaraj</div>
       <nav class="navlinks" aria-label="Primary">
-        <a href="index.html">Home</a><a href="about.html">About</a><a href="experience.html">Experience</a>
-        <a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="education.html">Education</a><a
-          href="contact.html">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills</a>
+        <a href="education.html">Education</a>
+        <a href="contact.html">Contact</a>
       </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="experience.html">Experience</a>
+    <a href="projects.html">Projects</a>
+    <a href="skills.html">Skills</a>
+    <a href="education.html">Education</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
   <section class="container reveal">
-    <div class="kicker">Let’s Talk</div>
-    <h1 class="h2">Contact</h1>
-    <div class="grid contact-grid">
-      <div class="card">
-        <h3 style="margin:0 0 8px">Data Engineer, AI & Data Engineer, or Analytics Engineer roles</h3>
-        <p style="color:var(--muted);line-height:1.7">Looking for opportunities to build production-grade data systems,
-          support ML/AI initiatives, and deliver analytics that drive business decisions. Happy to share code,
-          dashboards, or discuss how I can help deliver outcomes for your team. Email is best; I'll reply promptly.</p>
-        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;color:var(--muted)">
-          <a href="mailto:mythilykanagaraj21@gmail.com">✉️ Email</a>
-          <span>📞 +1-813-323-3780</span>
-          <a href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200/" target="_blank">LinkedIn</a>
-          <a href="https://github.com/Mythily2110" target="_blank">GitHub</a>
+    <div class="kicker">Let's Talk</div>
+    <h1 class="h2">Get in Touch</h1>
+
+    <div class="grid grid-2" style="gap:28px;align-items:start">
+
+      <!-- Left: Info -->
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="card">
+          <h3 class="h3" style="margin-bottom:10px">Open to Opportunities</h3>
+          <p style="font-size:14px">
+            Looking for <strong style="color:var(--text)">Data Engineer, AI & Data Engineer, or Analytics Engineer</strong> roles
+            where I can build production-grade data systems, support ML/AI initiatives, and deliver analytics that drive
+            business decisions. Happy to share code, dashboards, or discuss how I can help your team.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 class="h3" style="margin-bottom:14px">Contact Details</h3>
+          <div class="contact-info" style="display:flex;flex-direction:column;gap:8px">
+            <a href="mailto:mythilykanagaraj21@gmail.com">
+              <span>✉</span> mythilykanagaraj21@gmail.com
+            </a>
+            <span><span>📞</span> +1-813-323-3780</span>
+            <a href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200/" target="_blank" rel="noreferrer">
+              <span>🔗</span> LinkedIn Profile ↗
+            </a>
+            <a href="https://github.com/Mythily2110" target="_blank" rel="noreferrer">
+              <span>🐙</span> GitHub ↗
+            </a>
+            <span><span>📍</span> Tampa, FL</span>
+          </div>
         </div>
       </div>
 
-      <form class="card" action="https://formspree.io/f/xojnjywd" method="POST">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <!-- Right: Form -->
+      <form class="card" action="https://formspree.io/f/xojnjywd" method="POST" style="display:flex;flex-direction:column;gap:14px">
+        <h3 class="h3" style="margin-bottom:4px">Send a Message</h3>
+        <div class="form-row">
           <input class="field" type="text" name="name" placeholder="Your name" required>
           <input class="field" type="email" name="_replyto" placeholder="Email address" required>
-          <textarea class="field" name="message" placeholder="Tell me about your project or role…" required></textarea>
-          <button class="btn" type="submit">Send Message</button>
         </div>
+        <input class="field" type="text" name="subject" placeholder="Subject / Role / Company">
+        <textarea class="field" name="message" placeholder="Tell me about the role, project, or just say hello…" required></textarea>
+        <button class="btn primary" type="submit" style="align-self:flex-start">Send Message →</button>
         <input type="hidden" name="_subject" value="Portfolio Contact">
-        <p style="color:var(--muted);font-size:12px;margin-top:10px">Powered by Formspree.</p>
+        <p style="font-size:12px;color:var(--subtle)">Powered by Formspree. I'll reply promptly.</p>
       </form>
+
     </div>
   </section>
 
   <footer>
-    <div class="container"
-      style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap">
+    <div class="container footer-inner">
       <div>© <span id="year"></span> Mythily Kanagaraj. All rights reserved.</div>
-      <div style="display:flex;gap:12px"><a href="about.html">About</a><a href="projects.html">Projects</a><a
-          href="contact.html">Contact</a></div>
+      <div style="display:flex;gap:16px">
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </footer>
+
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
     const here = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.navlinks a').forEach(a => { if (a.getAttribute('href') === here) a.classList.add('active') });
-    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .2 });
+    document.querySelectorAll('.navlinks a, .mobile-menu a').forEach(a => { if (a.getAttribute('href') === here) a.classList.add('active') });
+    const ham = document.getElementById('hamburger');
+    const mob = document.getElementById('mobileMenu');
+    ham.addEventListener('click', () => { ham.classList.toggle('open'); mob.classList.toggle('open') });
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .15 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   </script>
 </body>
-
 </html>
