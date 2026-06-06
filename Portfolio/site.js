@@ -18,33 +18,11 @@ if (ham) ham.addEventListener('click', () => {
 
 // ── Scroll reveal (.reveal) ───────────────────────────────────
 const revealIO = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') });
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('show'); });
 }, { threshold: 0.12 });
 document.querySelectorAll('.reveal').forEach(el => revealIO.observe(el));
 
 // ── AOS init ──────────────────────────────────────────────────
 if (typeof AOS !== 'undefined') {
   AOS.init({ duration: 680, once: true, offset: 55, easing: 'ease-out-cubic' });
-}
-
-// ── Dark / Light Mode Toggle ──────────────────────────────────
-const html   = document.documentElement;
-const toggle = document.getElementById('theme-toggle');
-
-// Apply saved preference immediately (also applied inline in <head> to avoid flash)
-if (localStorage.getItem('theme') === 'dark') html.classList.add('dark');
-
-function syncToggleIcon() {
-  if (!toggle) return;
-  toggle.textContent = html.classList.contains('dark') ? '☀️' : '🌙';
-  toggle.setAttribute('aria-label', html.classList.contains('dark') ? 'Switch to light mode' : 'Switch to dark mode');
-}
-syncToggleIcon();
-
-if (toggle) {
-  toggle.addEventListener('click', () => {
-    html.classList.toggle('dark');
-    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-    syncToggleIcon();
-  });
 }
