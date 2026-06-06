@@ -92,23 +92,16 @@
       </div>
 
       <div class="reveal reveal-delay-2" style="display:flex;flex-direction:column;gap:20px">
-        <!-- AI Avatar Player Console -->
-        <div class="video-console">
-          <div class="video-header">
-            <span class="dot-control dot-red"></span>
-            <span class="dot-control dot-yellow"></span>
-            <span class="dot-control dot-green"></span>
-            <span class="video-title">mythily_twin_ai_agent.sh</span>
-          </div>
-          <div class="video-wrapper">
-            <div class="video-placeholder" id="avatar-play-placeholder">
-              <img src="profile.jpg" alt="Mythily Kanagaraj Profile Portrait">
-              <div class="play-btn">▶</div>
-              <span class="play-caption">Play AI Introduction</span>
-            </div>
-            <div id="avatar-player-container" style="display:none;width:100%;height:100%;position:absolute;top:0;left:0;">
-              <iframe id="heygen-iframe" src="" style="width:100%;height:100%;border:none;"
-                allow="microphone;camera;autoplay;encrypted-media;picture-in-picture" allowfullscreen></iframe>
+
+        <!-- Profile Showcase Card -->
+        <div class="profile-card-hero" data-aos="fade-left">
+          <img src="profile.jpg" alt="Mythily Kanagaraj" class="profile-hero-img">
+          <div class="profile-hero-overlay">
+            <p class="profile-hero-name">Mythily Kanagaraj</p>
+            <p class="profile-hero-role">AI/ML Engineer · USF Research Assistant</p>
+            <div class="tags" style="margin:8px 0 0">
+              <span class="tag light">InnovateK12</span>
+              <span class="tag light">USF Behavioral AI Lab</span>
             </div>
           </div>
         </div>
@@ -187,35 +180,6 @@
       setTimeout(type, deleting ? 38 : 68);
     }
     type();
-
-    /* ── HeyGen Playback ── */
-    const placeholder = document.getElementById('avatar-play-placeholder');
-    const container   = document.getElementById('avatar-player-container');
-    const iframe      = document.getElementById('heygen-iframe');
-
-    // TODO: Replace empty string with your real HeyGen embed URL
-    // Example: "https://embed.heygen.com/projects/YOUR_PROJECT_ID"
-    const HEYGEN_EMBED_URL = "";
-
-    placeholder.addEventListener('click', () => {
-      placeholder.style.display = 'none';
-      container.style.display = 'block';
-      if (HEYGEN_EMBED_URL) {
-        iframe.src = HEYGEN_EMBED_URL;
-      } else {
-        container.innerHTML = `
-          <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface);padding:20px;text-align:center;gap:12px;font-family:monospace;border:1px solid rgba(225,29,72,0.15);">
-            <div style="color:var(--accent);font-weight:bold;font-size:14px;animation:blink 1.2s infinite alternate;">[ CONNECTING TO MYTHILY AI NEURAL NET... ]</div>
-            <div style="font-size:11px;color:var(--muted);text-align:left;max-width:320px;line-height:1.5;">
-              > Booting virtual avatar engine... OK<br>
-              > Synchronizing speech profiles... OK<br>
-              > Running HeyGen AI interactive session...<br>
-              <span style="color:var(--accent2);font-weight:bold;">[SET HEYGEN_EMBED_URL IN index.html]</span>
-            </div>
-            <button class="btn outline" style="padding:6px 12px;font-size:11px;margin-top:8px;" onclick="window.open('https://www.heygen.com','_blank')">HeyGen Website ↗</button>
-          </div>`;
-      }
-    });
   </script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="site.js"></script>

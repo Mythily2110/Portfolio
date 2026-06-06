@@ -5,10 +5,10 @@
   let W, H, nodes = [];
   const COUNT = 70, LINK_DIST = 140, SPEED = 0.35;
 
-  // Rose and Lavender palette
-  const ROSE     = [232, 121, 160];
-  const LAVENDER = [167, 139, 250];
-  const BLUSH    = [244, 114, 182];
+  // Sage & Ivory palette
+  const SAGE     = [74,  124,  89];
+  const GOLD     = [201, 168,  76];
+  const FERN     = [106, 176, 120];
 
   let mouse = { x: null, y: null, active: false };
 
@@ -16,7 +16,7 @@
 
   function makeNode() {
     const r = Math.random();
-    const col = r < 0.45 ? ROSE : r < 0.80 ? LAVENDER : BLUSH;
+    const col = r < 0.45 ? SAGE : r < 0.80 ? GOLD : FERN;
     return {
       x: Math.random() * W, y: Math.random() * H,
       vx: (Math.random() - .5) * SPEED, vy: (Math.random() - .5) * SPEED,
@@ -69,7 +69,7 @@
         if (d < 170) {
           const alpha = (1 - d / 170) * 0.38;
           ctx.beginPath();
-          ctx.strokeStyle = `rgba(232,121,160,${alpha})`;
+          ctx.strokeStyle = `rgba(74,124,89,${alpha})`;
           ctx.lineWidth = 0.75;
           ctx.moveTo(n.x, n.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
         }
