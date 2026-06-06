@@ -6,6 +6,7 @@
   <title>About – Mythily Kanagaraj</title>
   <meta name="description" content="About Mythily Kanagaraj — AI/ML Engineer at InnovateK12, Research Assistant at USF Behavioral AI Lab, M.S. AI & Business Analytics." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -34,22 +35,20 @@
     <a href="education.html">Education</a><a href="contact.html">Contact</a>
   </nav>
 
+  <!-- ── About Section ── -->
   <section class="container reveal">
     <div class="kicker">About Me</div>
 
     <!-- Profile header -->
     <div style="display:flex;align-items:center;gap:36px;margin-bottom:44px;flex-wrap:wrap">
-
-      <!-- Photo — no absolute children, clean circle -->
-      <div style="flex-shrink:0;width:148px;height:148px;border-radius:50%;padding:3px;
+      <div class="pulsing-border" style="flex-shrink:0;width:148px;height:148px;border-radius:50%;padding:3px;
                   background:linear-gradient(135deg,var(--accent),var(--accent2))">
         <img src="profile.jpg" alt="Mythily Kanagaraj"
           style="width:100%;height:100%;border-radius:50%;object-fit:cover;
                  object-position:center top;display:block;
-                 border:3px solid var(--bg);">
+                 border:3px solid var(--bg);position:relative;z-index:2;">
       </div>
 
-      <!-- Info -->
       <div style="display:flex;flex-direction:column;gap:10px">
         <h1 style="font-size:clamp(26px,4vw,44px);font-weight:800;letter-spacing:-.5px;line-height:1.1;margin:0">
           Mythily Kanagaraj
@@ -66,14 +65,13 @@
           </span>
         </div>
       </div>
-
     </div>
 
     <div class="grid grid-2" style="align-items:start;gap:28px">
 
       <!-- Left Column -->
       <div class="about-col">
-        <div class="card">
+        <div class="card" data-aos="fade-up">
           <h3 class="h3" style="margin-bottom:12px">AI/ML Engineer</h3>
           <p>
             I am an AI/ML Engineer currently interning at <strong style="color:var(--text)">InnovateK12</strong>, a role I began in Spring and am continuing through Summer.
@@ -81,7 +79,7 @@
             to machine learning models that surface actionable insights from real user data.
           </p>
           <p style="margin-top:12px">
-            Alongside my internship, I serve as a <a href="https://www.usf.edu/business/centers/behavioral-ai-research/team.aspx" target="_blank" rel="noreferrer" style="color:var(--accent2);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(245,158,11,.35)">Research Assistant at USF's Behavioral AI Lab ↗</a>,
+            Alongside my internship, I serve as a <a href="https://www.usf.edu/business/centers/behavioral-ai-research/team.aspx" target="_blank" rel="noreferrer" style="color:var(--accent2);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(217,119,6,.35)">Research Assistant at USF's Behavioral AI Lab ↗</a>,
             studying human-AI interaction, trust, and the emotional impact of AI systems on users.
           </p>
           <div class="tags" style="margin-top:16px">
@@ -92,7 +90,7 @@
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="80">
           <h3 class="h3" style="margin-bottom:12px">Academic Background</h3>
           <p style="font-size:14px">
             I am pursuing a <strong style="color:var(--text)">Master of Science in Artificial Intelligence &amp; Business Analytics</strong>
@@ -109,7 +107,28 @@
 
       <!-- Right Column -->
       <div class="about-col">
-        <div class="card card-featured">
+        <!-- AI Avatar Player Console -->
+        <div class="video-console" data-aos="fade-left">
+          <div class="video-header">
+            <span class="dot-control dot-red"></span>
+            <span class="dot-control dot-yellow"></span>
+            <span class="dot-control dot-green"></span>
+            <span class="video-title">mythily_twin_ai_agent.sh</span>
+          </div>
+          <div class="video-wrapper">
+            <div class="video-placeholder" id="avatar-play-placeholder">
+              <img src="profile.jpg" alt="Mythily Kanagaraj Profile Portrait">
+              <div class="play-btn">▶</div>
+              <span class="play-caption">Play AI Introduction</span>
+            </div>
+            <div id="avatar-player-container" style="display:none;width:100%;height:100%;position:absolute;top:0;left:0;">
+              <iframe id="heygen-iframe" src="" style="width:100%;height:100%;border:none;"
+                allow="microphone;camera;autoplay;encrypted-media;picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-featured" data-aos="fade-up" data-aos-delay="120">
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px">
             <h3 class="h3">Current Project</h3>
             <span class="status-badge status-live"><span class="dot"></span> Live</span>
@@ -134,7 +153,7 @@
           <a class="btn outline" href="projects.html" style="margin-top:16px;font-size:13px">See All Projects →</a>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-delay="200">
           <h3 class="h3" style="margin-bottom:12px">What Drives Me</h3>
           <div style="display:flex;flex-direction:column;gap:14px">
             <div style="display:flex;gap:12px">
@@ -161,11 +180,58 @@
     </div>
   </section>
 
+  <!-- ── Meet Me Section ── -->
+  <section class="container reveal" id="meet-me">
+    <div class="kicker">Meet Me</div>
+    <h2 class="h2">Have a question? Ask my AI avatar.</h2>
+
+    <div class="heygen-card" data-aos="fade-up">
+      <p style="color:var(--muted);font-size:15px;max-width:52ch;margin:0 auto 32px;line-height:1.7">
+        My AI twin is always available to answer questions about my experience, projects, and skills —
+        powered by HeyGen's LiveAvatar technology.
+      </p>
+
+      <!-- HeyGen LiveAvatar embed -->
+      <!-- TODO: Replace YOUR_WIDGET_ID with your real HeyGen LiveAvatar embed/widget ID -->
+      <!-- Instructions: Dashboard → Interactive Avatar → Share/Embed → copy the widget ID or iframe src -->
+      <div class="heygen-embed-wrap" id="heygen-avatar-container">
+        <script src="https://unpkg.com/@heygen/streaming-avatar@latest"></script>
+        <!-- Avatar loads here after you add your widget ID to the HeyGen SDK init below -->
+        <div id="heygen-avatar-placeholder" style="
+          min-height:360px;
+          display:flex;flex-direction:column;align-items:center;justify-content:center;
+          background:linear-gradient(135deg,rgba(225,29,72,0.04),rgba(217,119,6,0.03),rgba(248,246,247,0.95));
+          gap:16px;padding:32px;text-align:center;border-radius:16px;">
+          <div style="font-size:48px;line-height:1">🤖</div>
+          <p style="font-size:15px;font-weight:700;color:var(--text);margin:0">Mythily AI Twin</p>
+          <p style="font-size:13px;color:var(--muted);max-width:280px;line-height:1.6;margin:0">
+            Add your HeyGen LiveAvatar widget ID to activate the interactive AI avatar here.
+          </p>
+          <a class="btn outline" href="https://www.heygen.com" target="_blank" rel="noreferrer" style="font-size:13px;margin-top:4px">
+            Set up on HeyGen ↗
+          </a>
+          <!-- TODO: Uncomment and fill in YOUR_WIDGET_ID once you have it from HeyGen dashboard
+          <script>
+            const avatar = new HeyGenAvatar({ widgetId: "YOUR_WIDGET_ID", containerId: "heygen-avatar-container" });
+            avatar.init();
+          </script>
+          -->
+        </div>
+      </div>
+
+      <p style="font-size:12px;color:var(--subtle);margin-top:20px">
+        Powered by <a href="https://www.heygen.com" target="_blank" rel="noreferrer" style="color:var(--accent2)">HeyGen LiveAvatar</a>.
+        Real-time AI avatar — ask me anything about my work.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Focus Areas ── -->
   <section class="container reveal">
     <div class="kicker">Focus Areas</div>
     <h2 class="h2">What I Build</h2>
     <div class="grid grid-3">
-      <div class="card">
+      <div class="card" data-aos="fade-up" data-aos-delay="0">
         <div style="font-size:26px;margin-bottom:12px">🤖</div>
         <h3 class="h3" style="margin-bottom:10px">ML / AI Systems</h3>
         <p style="font-size:14px">
@@ -173,7 +239,7 @@
           NLP, sentiment analysis, behavioral modeling, and production model deployment.
         </p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
         <div style="font-size:26px;margin-bottom:12px">🔬</div>
         <h3 class="h3" style="margin-bottom:10px">Behavioral AI Research</h3>
         <p style="font-size:14px">
@@ -181,7 +247,7 @@
           analyzing behavioral patterns, and developing AI frameworks grounded in real user data.
         </p>
       </div>
-      <div class="card">
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
         <div style="font-size:26px;margin-bottom:12px">⚙️</div>
         <h3 class="h3" style="margin-bottom:10px">Data Engineering</h3>
         <p style="font-size:14px">
@@ -204,15 +270,36 @@
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const here = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.navlinks a, .mobile-menu a').forEach(a => { if (a.getAttribute('href') === here) a.classList.add('active') });
-    const ham = document.getElementById('hamburger');
-    const mob = document.getElementById('mobileMenu');
-    ham.addEventListener('click', () => { ham.classList.toggle('open'); mob.classList.toggle('open') });
-    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .14 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    /* ── HeyGen About Page Playback ── */
+    const placeholder = document.getElementById('avatar-play-placeholder');
+    const container   = document.getElementById('avatar-player-container');
+    const iframe      = document.getElementById('heygen-iframe');
+
+    // TODO: Replace empty string with your HeyGen embed URL
+    const HEYGEN_EMBED_URL = "";
+
+    placeholder.addEventListener('click', () => {
+      placeholder.style.display = 'none';
+      container.style.display = 'block';
+      if (HEYGEN_EMBED_URL) {
+        iframe.src = HEYGEN_EMBED_URL;
+      } else {
+        container.innerHTML = `
+          <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface);padding:20px;text-align:center;gap:12px;font-family:monospace;border:1px solid rgba(225,29,72,0.15);">
+            <div style="color:var(--accent);font-weight:bold;font-size:14px;animation:blink 1.2s infinite alternate;">[ CONNECTING TO MYTHILY AI NEURAL NET... ]</div>
+            <div style="font-size:11px;color:var(--muted);text-align:left;max-width:320px;line-height:1.5;">
+              > Booting virtual avatar engine... OK<br>
+              > Synchronizing speech profiles... OK<br>
+              > Running HeyGen AI interactive session...<br>
+              <span style="color:var(--accent2);font-weight:bold;">[SET HEYGEN_EMBED_URL IN about.html]</span>
+            </div>
+            <button class="btn outline" style="padding:6px 12px;font-size:11px;margin-top:8px;" onclick="window.open('https://www.heygen.com','_blank')">HeyGen Website ↗</button>
+          </div>`;
+      }
+    });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="site.js"></script>
   <script src="neural.js"></script>
 </body>
 </html>

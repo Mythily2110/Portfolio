@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Skills – Mythily Kanagaraj</title>
   <meta name="description" content="AI/ML engineering skills of Mythily Kanagaraj — PyTorch, TensorFlow, LLMs, NLP, LangChain, Hugging Face, AWS, Azure, and more." />
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <canvas id="neural-canvas" aria-hidden="true"></canvas>
@@ -38,117 +39,131 @@
     <div class="kicker">Toolbox</div>
     <h1 class="h2">Skills</h1>
 
-    <div class="grid grid-2" style="gap:20px">
+    <!-- ── Bento Grid ── -->
+    <div class="bento-grid">
 
-      <div class="skill-section">
-
-        <div class="card skill-cat">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-            <span style="font-size:22px">🤖</span>
-            <div class="skill-cat-label" style="margin:0">Machine Learning / Deep Learning</div>
-          </div>
-          <div class="chips">
-            <span class="chip-skill">PyTorch</span>
-            <span class="chip-skill">TensorFlow</span>
-            <span class="chip-skill">Keras</span>
-            <span class="chip-skill">scikit-learn</span>
-            <span class="chip-skill">XGBoost</span>
-            <span class="chip-skill">LightGBM</span>
-            <span class="chip-skill">LSTM</span>
-            <span class="chip-skill">Transformers</span>
-            <span class="chip-skill">CNNs</span>
-            <span class="chip-skill">MLflow</span>
-          </div>
+      <!-- ML / Deep Learning — large (span 2) -->
+      <div class="bento-cell span-2 featured" data-aos="fade-up" data-aos-delay="0">
+        <span class="bento-icon">🤖</span>
+        <span class="bento-cat-label">Machine Learning / Deep Learning</span>
+        <div class="chips">
+          <span class="chip-skill">PyTorch</span>
+          <span class="chip-skill">TensorFlow</span>
+          <span class="chip-skill">Keras</span>
+          <span class="chip-skill">scikit-learn</span>
+          <span class="chip-skill">XGBoost</span>
+          <span class="chip-skill">LightGBM</span>
+          <span class="chip-skill">LSTM</span>
+          <span class="chip-skill">Transformers</span>
+          <span class="chip-skill">CNNs</span>
+          <span class="chip-skill">MLflow</span>
         </div>
-
-        <div class="card skill-cat">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-            <span style="font-size:22px">🧠</span>
-            <div class="skill-cat-label" style="margin:0">LLMs & NLP</div>
-          </div>
-          <div class="chips">
-            <span class="chip-skill">LLMs</span>
-            <span class="chip-skill">LangChain</span>
-            <span class="chip-skill">Hugging Face</span>
-            <span class="chip-skill">spaCy</span>
-            <span class="chip-skill">NLTK</span>
-            <span class="chip-skill">TF-IDF</span>
-            <span class="chip-skill">Transformer Embeddings</span>
-            <span class="chip-skill">Sentiment Analysis</span>
-            <span class="chip-skill">Prompt Engineering</span>
-            <span class="chip-skill">RAG</span>
-          </div>
-        </div>
-
-        <div class="card skill-cat">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-            <span style="font-size:22px">💻</span>
-            <div class="skill-cat-label" style="margin:0">Programming</div>
-          </div>
-          <div class="chips">
-            <span class="chip-skill">Python</span>
-            <span class="chip-skill">JavaScript</span>
-            <span class="chip-skill">SQL</span>
-            <span class="chip-skill">PostgreSQL</span>
-            <span class="chip-skill">MySQL</span>
-            <span class="chip-skill">Bash</span>
-          </div>
-        </div>
-
       </div>
 
-      <div class="skill-section">
-
-        <div class="card skill-cat">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-            <span style="font-size:22px">☁️</span>
-            <div class="skill-cat-label" style="margin:0">Cloud & Data Engineering</div>
-          </div>
-          <div class="chips">
-            <span class="chip-skill">AWS (Glue, Lambda, S3, Redshift)</span>
-            <span class="chip-skill">Azure Data Factory</span>
-            <span class="chip-skill">Databricks</span>
-            <span class="chip-skill">Snowflake</span>
-            <span class="chip-skill">AKS</span>
-            <span class="chip-skill">Kinesis</span>
-            <span class="chip-skill">Athena</span>
-          </div>
+      <!-- Stats card -->
+      <div class="bento-cell" data-aos="fade-up" data-aos-delay="80" style="display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:20px">
+        <div>
+          <span class="bento-stat">10</span>
+          <span class="bento-stat-label">Behavioral AI models</span>
         </div>
-
-        <div class="card skill-cat">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-            <span style="font-size:22px">🔁</span>
-            <div class="skill-cat-label" style="margin:0">MLOps & Deployment</div>
-          </div>
-          <div class="chips">
-            <span class="chip-skill">FastAPI</span>
-            <span class="chip-skill">Streamlit</span>
-            <span class="chip-skill">Docker</span>
-            <span class="chip-skill">Kubernetes</span>
-            <span class="chip-skill">GitHub Actions</span>
-            <span class="chip-skill">CI/CD</span>
-            <span class="chip-skill">Hugging Face Spaces</span>
-          </div>
+        <div class="divider" style="width:60%;margin:0 auto"></div>
+        <div>
+          <span class="bento-stat">3+</span>
+          <span class="bento-stat-label">Years cloud engineering</span>
         </div>
-
-        <div class="card skill-cat">
-          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px">
-            <span style="font-size:22px">🔬</span>
-            <div class="skill-cat-label" style="margin:0">Research & Analytics</div>
-          </div>
-          <div class="chips">
-            <span class="chip-skill">Behavioral Modeling</span>
-            <span class="chip-skill">Bayesian Inference</span>
-            <span class="chip-skill">Statsmodels</span>
-            <span class="chip-skill">Qualtrics</span>
-            <span class="chip-skill">Survey Design</span>
-            <span class="chip-skill">Power BI</span>
-            <span class="chip-skill">Tableau</span>
-            <span class="chip-skill">QuickSight</span>
-          </div>
-        </div>
-
       </div>
+
+      <!-- LLMs & NLP — large (span 2) -->
+      <div class="bento-cell span-2" data-aos="fade-up" data-aos-delay="100">
+        <span class="bento-icon">🧠</span>
+        <span class="bento-cat-label">LLMs &amp; NLP</span>
+        <div class="chips">
+          <span class="chip-skill">LLMs</span>
+          <span class="chip-skill">LangChain</span>
+          <span class="chip-skill">Hugging Face</span>
+          <span class="chip-skill">spaCy</span>
+          <span class="chip-skill">NLTK</span>
+          <span class="chip-skill">TF-IDF</span>
+          <span class="chip-skill">Transformer Embeddings</span>
+          <span class="chip-skill">Sentiment Analysis</span>
+          <span class="chip-skill">Prompt Engineering</span>
+          <span class="chip-skill">RAG</span>
+        </div>
+      </div>
+
+      <!-- Programming -->
+      <div class="bento-cell" data-aos="fade-up" data-aos-delay="140">
+        <span class="bento-icon">💻</span>
+        <span class="bento-cat-label">Programming</span>
+        <div class="chips">
+          <span class="chip-skill">Python</span>
+          <span class="chip-skill">JavaScript</span>
+          <span class="chip-skill">SQL</span>
+          <span class="chip-skill">PostgreSQL</span>
+          <span class="chip-skill">MySQL</span>
+          <span class="chip-skill">Bash</span>
+        </div>
+      </div>
+
+      <!-- Cloud & Data Engineering -->
+      <div class="bento-cell" data-aos="fade-up" data-aos-delay="160">
+        <span class="bento-icon">☁️</span>
+        <span class="bento-cat-label">Cloud &amp; Data Engineering</span>
+        <div class="chips">
+          <span class="chip-skill">AWS (Glue, Lambda, S3, Redshift)</span>
+          <span class="chip-skill">Azure Data Factory</span>
+          <span class="chip-skill">Databricks</span>
+          <span class="chip-skill">Snowflake</span>
+          <span class="chip-skill">AKS</span>
+          <span class="chip-skill">Kinesis</span>
+          <span class="chip-skill">Athena</span>
+        </div>
+      </div>
+
+      <!-- MLOps -->
+      <div class="bento-cell" data-aos="fade-up" data-aos-delay="180">
+        <span class="bento-icon">🔁</span>
+        <span class="bento-cat-label">MLOps &amp; Deployment</span>
+        <div class="chips">
+          <span class="chip-skill">FastAPI</span>
+          <span class="chip-skill">Streamlit</span>
+          <span class="chip-skill">Docker</span>
+          <span class="chip-skill">Kubernetes</span>
+          <span class="chip-skill">GitHub Actions</span>
+          <span class="chip-skill">CI/CD</span>
+          <span class="chip-skill">Hugging Face Spaces</span>
+        </div>
+      </div>
+
+      <!-- Research & Analytics — wide (span 2) -->
+      <div class="bento-cell span-2" data-aos="fade-up" data-aos-delay="200">
+        <span class="bento-icon">🔬</span>
+        <span class="bento-cat-label">Research &amp; Analytics</span>
+        <div class="chips">
+          <span class="chip-skill">Behavioral Modeling</span>
+          <span class="chip-skill">Bayesian Inference</span>
+          <span class="chip-skill">Statsmodels</span>
+          <span class="chip-skill">Qualtrics</span>
+          <span class="chip-skill">Survey Design</span>
+          <span class="chip-skill">Power BI</span>
+          <span class="chip-skill">Tableau</span>
+          <span class="chip-skill">QuickSight</span>
+        </div>
+      </div>
+
+      <!-- Key strengths highlight -->
+      <div class="bento-cell featured" data-aos="fade-up" data-aos-delay="220"
+           style="display:flex;flex-direction:column;justify-content:center;gap:12px;text-align:center;align-items:center">
+        <span style="font-size:32px">🚀</span>
+        <p style="font-size:13px;font-weight:600;color:var(--text);margin:0;line-height:1.5">
+          Production-ready AI<br>from research to deployment
+        </p>
+        <div class="tags" style="justify-content:center;margin:0">
+          <span class="tag">Full-Stack ML</span>
+          <span class="tag teal">Cloud-Native</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -163,16 +178,8 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const here = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.navlinks a, .mobile-menu a').forEach(a => { if (a.getAttribute('href') === here) a.classList.add('active') });
-    const ham = document.getElementById('hamburger');
-    const mob = document.getElementById('mobileMenu');
-    ham.addEventListener('click', () => { ham.classList.toggle('open'); mob.classList.toggle('open') });
-    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="site.js"></script>
   <script src="neural.js"></script>
 </body>
 </html>
