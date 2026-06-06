@@ -6,7 +6,10 @@
   <title>Mythily Kanagaraj – AI/ML Engineer · Research · Data</title>
   <meta name="description" content="AI/ML Engineer and Research Assistant at USF — building intelligent systems, behavioral AI platforms, and NLP pipelines." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="style.css">
+  <!-- Prevent dark-mode flash -->
+  <script>if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark')</script>
 </head>
 <body>
 
@@ -23,6 +26,7 @@
         <a href="education.html">Education</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -40,29 +44,47 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Hero with Neural Network Canvas -->
+  <!-- Hero -->
   <div class="hero-wrap">
     <canvas id="neural-canvas" aria-hidden="true"></canvas>
 
+    <!-- Animated gradient blobs -->
+    <div class="hero-glow-overlay" aria-hidden="true">
+      <div class="hero-glow-blob"></div>
+      <div class="hero-glow-blob"></div>
+      <div class="hero-glow-blob"></div>
+    </div>
+
     <section class="container hero">
       <div class="reveal">
+
+        <!-- Open to Work badge -->
+        <div class="open-to-work">
+          <span class="otw-dot"></span>
+          Open to Work · AI/ML · Data Engineering
+        </div>
+
         <div class="hero-tag">
           <span class="dot"></span>
           AI/ML Intern @ InnovateK12 · Research Assistant @ USF Behavioral AI Lab
         </div>
+
         <h1 class="h1">
           <span id="typed-line"></span><span class="typewriter"></span>
         </h1>
+
         <p class="lead" style="margin-top:20px">
           AI/ML Engineer currently interning at InnovateK12 and serving as a Research Assistant at USF's Behavioral AI Lab.
           Pursuing an M.S. in Artificial Intelligence &amp; Business Analytics at the University of South Florida.
           Previously a Data Engineer at Infosys with 3+ years of experience building cloud-native pipelines on AWS and Azure.
         </p>
+
         <div class="cta">
           <a class="btn primary shine" href="projects.html">View Projects</a>
           <a class="btn outline" href="experience.html">Experience</a>
           <a class="btn outline" href="contact.html">Get in Touch</a>
         </div>
+
         <div class="hero-info">
           <span>📍 Tampa, FL</span>
           <a href="mailto:mythilykanagaraj21@gmail.com">✉ mythilykanagaraj21@gmail.com</a>
@@ -71,7 +93,7 @@
         </div>
       </div>
 
-      <div class="reveal reveal-delay-2" style="display:flex; flex-direction:column; gap:20px;">
+      <div class="reveal reveal-delay-2" style="display:flex;flex-direction:column;gap:20px">
         <!-- AI Avatar Player Console -->
         <div class="video-console">
           <div class="video-header">
@@ -81,36 +103,33 @@
             <span class="video-title">mythily_twin_ai_agent.sh</span>
           </div>
           <div class="video-wrapper">
-            <!-- Click-to-play placeholder overlay -->
             <div class="video-placeholder" id="avatar-play-placeholder">
               <img src="profile.jpg" alt="Mythily Kanagaraj Profile Portrait">
               <div class="play-btn">▶</div>
               <span class="play-caption">Play AI Introduction</span>
             </div>
-            
-            <!-- HeyGen Embedded Player container -->
-            <!-- If you have a specific HeyGen embed iframe snippet, replace the src below or paste the entire iframe here. -->
-            <div id="avatar-player-container" style="display:none; width:100%; height:100%; position:absolute; top:0; left:0; background:#000;">
-              <iframe id="heygen-iframe" src="" style="width:100%; height:100%; border:none;" allow="microphone; camera; autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+            <div id="avatar-player-container" style="display:none;width:100%;height:100%;position:absolute;top:0;left:0;">
+              <iframe id="heygen-iframe" src="" style="width:100%;height:100%;border:none;"
+                allow="microphone;camera;autoplay;encrypted-media;picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>
 
         <!-- Stats Grid -->
         <div class="stats-grid">
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
             <div class="stat-num">AI/ML</div>
             <div class="stat-label">Current role · InnovateK12</div>
           </div>
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="80">
             <div class="stat-num">3+</div>
             <div class="stat-label">Years industry experience</div>
           </div>
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="160">
             <div class="stat-num">10</div>
             <div class="stat-label">Behavioral AI models built</div>
           </div>
-          <div class="stat-card">
+          <div class="stat-card" data-aos="fade-up" data-aos-delay="240">
             <div class="stat-num">3.4</div>
             <div class="stat-label">GPA · M.S. AI & Analytics</div>
           </div>
@@ -123,20 +142,20 @@
   <section class="container reveal" style="padding-top:0">
     <div class="kicker">Current Stack</div>
     <div class="chips" style="margin-top:12px">
-      <span class="chip-skill">Python</span>
-      <span class="chip-skill">PyTorch</span>
-      <span class="chip-skill">TensorFlow</span>
-      <span class="chip-skill">Scikit-learn</span>
-      <span class="chip-skill">Hugging Face</span>
-      <span class="chip-skill">LangChain</span>
-      <span class="chip-skill">NLP / spaCy</span>
-      <span class="chip-skill">LLMs</span>
-      <span class="chip-skill">FastAPI</span>
-      <span class="chip-skill">Streamlit</span>
-      <span class="chip-skill">AWS · Azure</span>
-      <span class="chip-skill">Docker</span>
-      <span class="chip-skill">Power BI</span>
-      <span class="chip-skill">SQL</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="0">Python</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="40">PyTorch</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="80">TensorFlow</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="120">Scikit-learn</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="160">Hugging Face</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="200">LangChain</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="240">NLP / spaCy</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="280">LLMs</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="320">FastAPI</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="360">Streamlit</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="400">AWS · Azure</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="440">Docker</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="480">Power BI</span>
+      <span class="chip-skill" data-aos="fade-up" data-aos-delay="520">SQL</span>
     </div>
   </section>
 
@@ -153,22 +172,6 @@
   </footer>
 
   <script>
-    /* ── Nav active + hamburger ── */
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const here = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.navlinks a, .mobile-menu a').forEach(a => {
-      if (a.getAttribute('href') === here) a.classList.add('active');
-    });
-    const ham = document.getElementById('hamburger');
-    const mob = document.getElementById('mobileMenu');
-    ham.addEventListener('click', () => { ham.classList.toggle('open'); mob.classList.toggle('open') });
-
-    /* ── Scroll reveal ── */
-    const io = new IntersectionObserver(es => es.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('show');
-    }), { threshold: .12 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-
     /* ── Typewriter ── */
     const lines = [
       'Building intelligent AI/ML systems.',
@@ -187,14 +190,14 @@
     }
     type();
 
-    /* ── HeyGen Video Interactive Playback Handler ── */
+    /* ── HeyGen Playback ── */
     const placeholder = document.getElementById('avatar-play-placeholder');
-    const container = document.getElementById('avatar-player-container');
-    const iframe = document.getElementById('heygen-iframe');
+    const container   = document.getElementById('avatar-player-container');
+    const iframe      = document.getElementById('heygen-iframe');
 
-    // Set your real HeyGen embed URL inside the quotes below!
+    // TODO: Replace empty string with your real HeyGen embed URL
     // Example: "https://embed.heygen.com/projects/YOUR_PROJECT_ID"
-    const HEYGEN_EMBED_URL = ""; 
+    const HEYGEN_EMBED_URL = "";
 
     placeholder.addEventListener('click', () => {
       placeholder.style.display = 'none';
@@ -202,26 +205,22 @@
       if (HEYGEN_EMBED_URL) {
         iframe.src = HEYGEN_EMBED_URL;
       } else {
-        // Simulated AI twin initialize log
         container.innerHTML = `
-          <div style="width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; background:#0c0608; padding:20px; text-align:center; gap:12px; font-family:monospace; border:1px solid rgba(244,63,94,0.2);">
-            <div style="color:var(--accent); font-weight:bold; font-size:14px; animation: blink 1.2s infinite alternate;">[ CONNECTING TO MYTHILY AI NEURAL NET... ]</div>
-            <div style="font-size:11px; color:var(--muted); text-align:left; max-width:320px; line-height:1.5;">
+          <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--surface);padding:20px;text-align:center;gap:12px;font-family:monospace;border:1px solid rgba(225,29,72,0.15);">
+            <div style="color:var(--accent);font-weight:bold;font-size:14px;animation:blink 1.2s infinite alternate;">[ CONNECTING TO MYTHILY AI NEURAL NET... ]</div>
+            <div style="font-size:11px;color:var(--muted);text-align:left;max-width:320px;line-height:1.5;">
               > Booting virtual avatar engine... OK<br>
               > Synchronizing speech profiles... OK<br>
               > Running HeyGen AI interactive session...<br>
-              <span style="color:var(--accent2); font-weight:bold;">[READY TO EMBED HEYGEN SNIPPET]</span>
+              <span style="color:var(--accent2);font-weight:bold;">[SET HEYGEN_EMBED_URL IN index.html]</span>
             </div>
-            <div style="font-size:11px; color:var(--text); max-width:280px; margin-top:8px; line-height:1.4;">
-              Open index.html and set the HEYGEN_EMBED_URL variable to your HeyGen project link to display your talking avatar!
-            </div>
-            <button class="btn outline" style="padding:6px 12px; font-size:11px; margin-top:8px;" onclick="window.open('https://www.heygen.com', '_blank')">HeyGen Website ↗</button>
-          </div>
-        `;
+            <button class="btn outline" style="padding:6px 12px;font-size:11px;margin-top:8px;" onclick="window.open('https://www.heygen.com','_blank')">HeyGen Website ↗</button>
+          </div>`;
       }
     });
-
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="site.js"></script>
   <script src="neural.js"></script>
 </body>
 </html>

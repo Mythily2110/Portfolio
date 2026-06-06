@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact – Mythily Kanagaraj</title>
   <meta name="description" content="Contact Mythily Kanagaraj — open to Data Engineer, AI & Data Engineer, and Analytics Engineer roles." />
-  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="style.css">
+  <script>if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark')</script>
 </head>
 <body>
   <canvas id="neural-canvas" aria-hidden="true"></canvas>
@@ -23,6 +25,7 @@
         <a href="education.html">Education</a>
         <a href="contact.html">Contact</a>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
@@ -46,7 +49,7 @@
 
       <!-- Left: Info -->
       <div style="display:flex;flex-direction:column;gap:20px">
-        <div class="card">
+        <div class="card" data-aos="fade-right">
           <h3 class="h3" style="margin-bottom:10px">Open to Opportunities</h3>
           <p style="font-size:14px">
             Looking for <strong style="color:var(--text)">Data Engineer, AI & Data Engineer, or Analytics Engineer</strong> roles
@@ -55,7 +58,7 @@
           </p>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-right" data-aos-delay="100">
           <h3 class="h3" style="margin-bottom:14px">Contact Details</h3>
           <div class="contact-info" style="display:flex;flex-direction:column;gap:8px">
             <a href="mailto:mythilykanagaraj21@gmail.com">
@@ -74,7 +77,10 @@
       </div>
 
       <!-- Right: Form -->
-      <form class="card" action="https://formspree.io/f/xojnjywd" method="POST" style="display:flex;flex-direction:column;gap:14px">
+      <!-- TODO: Replace formspree action URL with your own if needed -->
+      <form class="card" action="https://formspree.io/f/xojnjywd" method="POST"
+            style="display:flex;flex-direction:column;gap:14px"
+            data-aos="fade-left">
         <h3 class="h3" style="margin-bottom:4px">Send a Message</h3>
         <div class="form-row">
           <input class="field" type="text" name="name" placeholder="Your name" required>
@@ -101,16 +107,8 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const here = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.navlinks a, .mobile-menu a').forEach(a => { if (a.getAttribute('href') === here) a.classList.add('active') });
-    const ham = document.getElementById('hamburger');
-    const mob = document.getElementById('mobileMenu');
-    ham.addEventListener('click', () => { ham.classList.toggle('open'); mob.classList.toggle('open') });
-    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('show') }), { threshold: .15 });
-    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="site.js"></script>
   <script src="neural.js"></script>
 </body>
 </html>
