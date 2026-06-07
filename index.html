@@ -42,18 +42,15 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Hero -->
-  <div class="hero-wrap">
-    <canvas id="neural-canvas" aria-hidden="true"></canvas>
-
-    <!-- Animated gradient blobs -->
-    <div class="hero-glow-overlay" aria-hidden="true">
-      <div class="hero-glow-blob"></div>
-      <div class="hero-glow-blob"></div>
-      <div class="hero-glow-blob"></div>
+  <!-- Hero — full-width photo overlay -->
+  <div class="hero-overlay-wrap">
+    <div class="hero-overlay-photo" data-aos="fade">
+      <img src="profile.jpg" alt="Mythily Kanagaraj" class="hero-overlay-img">
+      <div class="hero-overlay-gradient" aria-hidden="true"></div>
+      <div class="hero-overlay-vignette" aria-hidden="true"></div>
     </div>
 
-    <section class="container hero">
+    <section class="container hero-overlay-content">
       <div class="reveal">
 
         <!-- Open to Work badge -->
@@ -67,11 +64,11 @@
           AI/ML Intern @ InnovateK12 · Research Assistant @ USF Behavioral AI Lab
         </div>
 
-        <h1 class="h1">
+        <h1 class="h1 hero-overlay-heading">
           <span id="typed-line"></span><span class="typewriter"></span>
         </h1>
 
-        <p class="lead" style="margin-top:20px">
+        <p class="lead hero-overlay-lead" style="margin-top:20px">
           AI/ML Engineer currently interning at InnovateK12 and serving as a Research Assistant at USF's Behavioral AI Lab.
           Pursuing an M.S. in Artificial Intelligence &amp; Business Analytics at the University of South Florida.
           Previously a Data Engineer at Infosys with 3+ years of experience building cloud-native pipelines on AWS and Azure.
@@ -79,55 +76,15 @@
 
         <div class="cta">
           <a class="btn primary shine" href="projects.html">View Projects</a>
-          <a class="btn outline" href="experience.html">Experience</a>
-          <a class="btn outline" href="contact.html">Get in Touch</a>
+          <a class="btn outline hero-overlay-btn" href="experience.html">Experience</a>
+          <a class="btn outline hero-overlay-btn" href="contact.html">Get in Touch</a>
         </div>
 
-        <div class="hero-info">
+        <div class="hero-info hero-overlay-info">
           <span>📍 Tampa, FL</span>
           <a href="mailto:mythilykanagaraj21@gmail.com">✉ mythilykanagaraj21@gmail.com</a>
           <a href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           <a href="https://github.com/Mythily2110" target="_blank" rel="noreferrer">GitHub ↗</a>
-        </div>
-      </div>
-
-      <div class="reveal reveal-delay-2" style="display:flex;flex-direction:column;gap:16px">
-
-        <!-- Profile with animated rotating gradient ring -->
-        <div class="profile-border-ring" data-aos="fade-left">
-          <div class="profile-card-hero">
-            <img src="profile.jpg" alt="Mythily Kanagaraj" class="profile-hero-img">
-            <div class="profile-hero-overlay">
-              <p class="profile-hero-name">Mythily Kanagaraj</p>
-              <p class="profile-hero-role">AI/ML Engineer · USF Research Assistant</p>
-              <div class="tags" style="margin:8px 0 0">
-                <span class="tag light">InnovateK12</span>
-                <span class="tag light">USF Behavioral AI Lab</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- AI Workflow Animation -->
-        <div class="ai-flow-card" data-aos="fade-up" data-aos-delay="120">
-          <span class="ai-flow-kicker">Live AI · ML · Data Pipeline</span>
-          <canvas id="ai-flow-canvas"></canvas>
-        </div>
-
-        <!-- Stats: 3 columns, no GPA -->
-        <div class="stats-grid" style="grid-template-columns:repeat(3,1fr)">
-          <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
-            <div class="stat-num">AI/ML</div>
-            <div class="stat-label">Current role · InnovateK12</div>
-          </div>
-          <div class="stat-card" data-aos="fade-up" data-aos-delay="80">
-            <div class="stat-num">3+</div>
-            <div class="stat-label">Years industry experience</div>
-          </div>
-          <div class="stat-card" data-aos="fade-up" data-aos-delay="160">
-            <div class="stat-num">10</div>
-            <div class="stat-label">Behavioral AI models built</div>
-          </div>
         </div>
       </div>
     </section>
@@ -188,131 +145,5 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="site.js"></script>
   <script src="neural.js"></script>
-  <script>
-  /* ── AI Workflow Canvas ── */
-  (function () {
-    const canvas = document.getElementById('ai-flow-canvas');
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    let W, H, T = 0;
-
-    const NODES = [
-      { label: 'Raw Data',    cx: 0.09, cy: 0.52 },
-      { label: 'NLP · LLM',  cx: 0.36, cy: 0.24 },
-      { label: 'ML Models',  cx: 0.63, cy: 0.76 },
-      { label: 'Insights',   cx: 0.91, cy: 0.46 },
-    ];
-
-    const EDGES = [
-      { a: 0, b: 1, pts: [0.05, 0.45, 0.80] },
-      { a: 1, b: 2, pts: [0.12, 0.52, 0.86] },
-      { a: 2, b: 3, pts: [0.22, 0.60, 0.90] },
-    ];
-
-    function resize() {
-      const dpr = window.devicePixelRatio || 1;
-      const rw = canvas.parentElement.clientWidth || 400;
-      canvas.style.width  = '100%';
-      canvas.style.height = '124px';
-      canvas.width  = rw * dpr;
-      canvas.height = 124 * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      W = rw; H = 124;
-    }
-
-    function npos(n) { return { x: n.cx * W, y: n.cy * H }; }
-
-    function quadBezier(t, p0, cp, p2) {
-      const u = 1 - t;
-      return { x: u*u*p0.x + 2*u*t*cp.x + t*t*p2.x,
-               y: u*u*p0.y + 2*u*t*cp.y + t*t*p2.y };
-    }
-
-    function rrect(x, y, w, h, r) {
-      ctx.beginPath();
-      ctx.moveTo(x + r, y);
-      ctx.lineTo(x + w - r, y); ctx.quadraticCurveTo(x + w, y, x + w, y + r);
-      ctx.lineTo(x + w, y + h - r); ctx.quadraticCurveTo(x + w, y + h, x + w - r, y + h);
-      ctx.lineTo(x + r, y + h); ctx.quadraticCurveTo(x, y + h, x, y + h - r);
-      ctx.lineTo(x, y + r); ctx.quadraticCurveTo(x, y, x + r, y);
-      ctx.closePath();
-    }
-
-    function frame() {
-      ctx.clearRect(0, 0, W, H);
-      T += 0.009;
-
-      const NW = Math.max(70, Math.min(92, W * 0.19));
-      const NH = 30, NR = 8;
-
-      EDGES.forEach((edge, ei) => {
-        const a = npos(NODES[edge.a]);
-        const b = npos(NODES[edge.b]);
-        const cp = { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 + (ei % 2 === 0 ? -20 : 18) };
-        const p0 = { x: a.x + NW / 2, y: a.y };
-        const p2 = { x: b.x - NW / 2, y: b.y };
-
-        // Gradient dashed line
-        const lg = ctx.createLinearGradient(a.x, a.y, b.x, b.y);
-        lg.addColorStop(0, 'rgba(74,124,89,0.32)');
-        lg.addColorStop(1, 'rgba(201,168,76,0.32)');
-        ctx.beginPath();
-        ctx.moveTo(p0.x, p0.y);
-        ctx.quadraticCurveTo(cp.x, cp.y, p2.x, p2.y);
-        ctx.strokeStyle = lg; ctx.lineWidth = 1.5;
-        ctx.setLineDash([5, 6]); ctx.stroke(); ctx.setLineDash([]);
-
-        // Arrowhead at end
-        const dt = 0.98;
-        const tip = quadBezier(dt, p0, cp, p2);
-        const ang = Math.atan2(p2.y - tip.y, p2.x - tip.x);
-        ctx.beginPath();
-        ctx.moveTo(p2.x, p2.y);
-        ctx.lineTo(p2.x - 9 * Math.cos(ang - 0.42), p2.y - 9 * Math.sin(ang - 0.42));
-        ctx.lineTo(p2.x - 9 * Math.cos(ang + 0.42), p2.y - 9 * Math.sin(ang + 0.42));
-        ctx.closePath();
-        ctx.fillStyle = 'rgba(201,168,76,0.58)'; ctx.fill();
-
-        // Flowing particles
-        edge.pts.forEach((off, pi) => {
-          const t = ((T * 0.55 + off) % 1);
-          const pos = quadBezier(t, p0, cp, p2);
-          const gold = pi % 2 === 0;
-          ctx.beginPath();
-          ctx.arc(pos.x, pos.y, 3.8, 0, Math.PI * 2);
-          ctx.fillStyle   = gold ? '#c9a84c' : '#4a7c59';
-          ctx.shadowColor = gold ? '#e8c55c' : '#5aad72';
-          ctx.shadowBlur  = 10; ctx.fill(); ctx.shadowBlur = 0;
-        });
-      });
-
-      // Node boxes
-      NODES.forEach((node, i) => {
-        const { x, y } = npos(node);
-        const gold = i % 2 === 1;
-        const col  = gold ? '#c9a84c' : '#4a7c59';
-        const bg   = gold ? 'rgba(201,168,76,0.09)' : 'rgba(74,124,89,0.09)';
-        const pulse = 1 + Math.sin(T * 1.9 + i * 1.35) * 0.03;
-        const pw = NW * pulse, ph = NH * pulse;
-
-        ctx.shadowColor = col; ctx.shadowBlur = 15;
-        rrect(x - pw/2, y - ph/2, pw, ph, NR);
-        ctx.fillStyle = bg; ctx.fill();
-        ctx.strokeStyle = col; ctx.lineWidth = 1.5; ctx.stroke();
-        ctx.shadowBlur = 0;
-
-        ctx.font = `600 ${Math.max(9, Math.min(10.5, W/40))}px Inter,sans-serif`;
-        ctx.fillStyle = col; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-        ctx.fillText(node.label, x, y);
-      });
-
-      requestAnimationFrame(frame);
-    }
-
-    const ro = new ResizeObserver(() => resize());
-    ro.observe(canvas.parentElement);
-    resize(); frame();
-  })();
-  </script>
 </body>
 </html>
