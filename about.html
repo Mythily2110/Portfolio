@@ -191,37 +191,29 @@
         powered by HeyGen's LiveAvatar technology.
       </p>
 
-      <!-- HeyGen LiveAvatar embed -->
-      <!-- TODO: Replace YOUR_WIDGET_ID with your real HeyGen LiveAvatar embed/widget ID -->
-      <!-- Instructions: Dashboard → Interactive Avatar → Share/Embed → copy the widget ID or iframe src -->
-      <div class="heygen-embed-wrap" id="heygen-avatar-container">
-        <script src="https://unpkg.com/@heygen/streaming-avatar@latest"></script>
-        <!-- Avatar loads here after you add your widget ID to the HeyGen SDK init below -->
-        <div id="heygen-avatar-placeholder" style="
-          min-height:360px;
-          display:flex;flex-direction:column;align-items:center;justify-content:center;
-          background:linear-gradient(135deg,rgba(225,29,72,0.04),rgba(217,119,6,0.03),rgba(248,246,247,0.95));
-          gap:16px;padding:32px;text-align:center;border-radius:16px;">
-          <div style="font-size:48px;line-height:1">🤖</div>
-          <p style="font-size:15px;font-weight:700;color:var(--text);margin:0">Mythily AI Twin</p>
-          <p style="font-size:13px;color:var(--muted);max-width:280px;line-height:1.6;margin:0">
-            Add your HeyGen LiveAvatar widget ID to activate the interactive AI avatar here.
-          </p>
-          <a class="btn outline" href="https://www.heygen.com" target="_blank" rel="noreferrer" style="font-size:13px;margin-top:4px">
-            Set up on HeyGen ↗
-          </a>
-          <!-- TODO: Uncomment and fill in YOUR_WIDGET_ID once you have it from HeyGen dashboard
-          <script>
-            const avatar = new HeyGenAvatar({ widgetId: "YOUR_WIDGET_ID", containerId: "heygen-avatar-container" });
-            avatar.init();
-          </script>
-          -->
-        </div>
+      <!-- Botpress AI Chatbot embed -->
+      <div class="heygen-embed-wrap" id="botpress-chat-wrap">
+        <div id="bp-chat-container" style="
+          width: 100%;
+          height: 500px;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+        "></div>
       </div>
+      <script src="https://cdn.botpress.cloud/webchat/v3.6/inject.js"></script>
+      <script>
+        botpress.init({
+          configUrl: "https://files.bpcontent.cloud/2026/06/07/20/20260607203308-187V5BNP.json",
+          container: "#bp-chat-container",
+          showBotName: true,
+          showCloseButton: true,
+        });
+      </script>
 
       <p style="font-size:12px;color:var(--subtle);margin-top:20px">
-        Powered by <a href="https://www.heygen.com" target="_blank" rel="noreferrer" style="color:var(--accent2)">HeyGen LiveAvatar</a>.
-        Real-time AI avatar — ask me anything about my work.
+        Powered by <a href="https://botpress.com" target="_blank" rel="noreferrer" style="color:var(--accent2)">Botpress</a>.
+        Ask me anything about my work, projects, or experience.
       </p>
     </div>
   </section>
