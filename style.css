@@ -435,8 +435,8 @@ p { color: var(--muted); line-height: 1.76 }
 
 /* ── Proj List ──────────────────────────────────────────────── */
 .proj-list { margin: 12px 0 0; display: flex; flex-direction: column; gap: 8px }
-.proj-list li { display: flex; gap: 10px; color: var(--muted); font-size: 14.5px; line-height: 1.6 }
-.proj-list li::before { content: "›"; color: var(--accent); flex-shrink: 0; margin-top: 1px; font-weight: 800 }
+.proj-list li { position: relative; padding-left: 20px; text-align: left; color: var(--muted); font-size: 14.5px; line-height: 1.6 }
+.proj-list li::before { content: "›"; color: var(--accent); position: absolute; left: 0; top: 0; font-weight: 800 }
 .proj-list strong { color: var(--text) }
 
 /* ── Timeline ───────────────────────────────────────────────── */
@@ -690,6 +690,32 @@ footer a:hover { color: var(--accent) }
   mask-composite: exclude; pointer-events: none;
 }
 .heygen-embed-wrap { width: 100%; max-width: 600px; margin: 0 auto; border-radius: 18px; overflow: hidden; box-shadow: 0 8px 32px rgba(74,124,89,0.12) }
+
+/* ── AI Twin placeholder (Meet Me) ──────────────────────────── */
+.ai-twin-placeholder {
+  width: 100%; max-width: 520px; margin: 0 auto; border-radius: 18px;
+  background: linear-gradient(140deg, rgba(74,124,89,0.08), rgba(201,168,76,0.06));
+  border: 1px solid rgba(74,124,89,0.16); padding: 36px 28px; text-align: center;
+}
+.ai-twin-orb {
+  width: 64px; height: 64px; margin: 0 auto 16px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex; align-items: center; justify-content: center; font-size: 26px;
+  box-shadow: 0 0 0 0 rgba(74,124,89,0.4); animation: orb-pulse 2.6s ease-out infinite;
+}
+@keyframes orb-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(74,124,89,0.35) }
+  70%  { box-shadow: 0 0 0 22px rgba(74,124,89,0) }
+  100% { box-shadow: 0 0 0 0 rgba(74,124,89,0) }
+}
+
+/* ── What Drives Me — animated icons ────────────────────────── */
+.drive-icon { display: inline-block; animation: drive-float 3.4s ease-in-out infinite }
+.drive-icon:nth-child(1) { animation-delay: 0s }
+@keyframes drive-float {
+  0%, 100% { transform: translateY(0) rotate(0deg) }
+  50%      { transform: translateY(-5px) rotate(-6deg) }
+}
 
 /* ── AI Intro Link Card ─────────────────────────────────────── */
 .ai-intro-card {
