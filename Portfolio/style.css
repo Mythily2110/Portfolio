@@ -319,7 +319,7 @@ p { color: var(--muted); line-height: 1.76 }
 
 .profile-card-hero {
   position: relative; border-radius: var(--radius); overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
 }
 .profile-border-ring:hover .profile-hero-img { transform: scale(1.04) }
 .profile-hero-img {
