@@ -42,16 +42,19 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Hero — full-width photo overlay -->
-  <div class="hero-overlay-wrap">
-    <div class="hero-overlay-photo" data-aos="fade">
-      <img src="profile.jpg" alt="Mythily Kanagaraj" class="hero-overlay-img">
-      <div class="hero-overlay-gradient" aria-hidden="true"></div>
-      <div class="hero-overlay-vignette" aria-hidden="true"></div>
+  <!-- Hero — glass text panel left, vertical photo right -->
+  <div class="hero-wrap">
+    <canvas id="neural-canvas" aria-hidden="true"></canvas>
+
+    <!-- Animated gradient blobs -->
+    <div class="hero-glow-overlay" aria-hidden="true">
+      <div class="hero-glow-blob"></div>
+      <div class="hero-glow-blob"></div>
+      <div class="hero-glow-blob"></div>
     </div>
 
-    <section class="container hero-overlay-content">
-      <div class="reveal">
+    <section class="container hero">
+      <div class="reveal hero-glass-panel">
 
         <!-- Open to Work badge -->
         <div class="open-to-work">
@@ -64,11 +67,11 @@
           AI/ML Intern @ InnovateK12 · Research Assistant @ USF Behavioral AI Lab
         </div>
 
-        <h1 class="h1 hero-overlay-heading">
+        <h1 class="h1">
           <span id="typed-line"></span><span class="typewriter"></span>
         </h1>
 
-        <p class="lead hero-overlay-lead" style="margin-top:20px">
+        <p class="lead" style="margin-top:20px">
           AI/ML Engineer currently interning at InnovateK12 and serving as a Research Assistant at USF's Behavioral AI Lab.
           Pursuing an M.S. in Artificial Intelligence &amp; Business Analytics at the University of South Florida.
           Previously a Data Engineer at Infosys with 3+ years of experience building cloud-native pipelines on AWS and Azure.
@@ -76,15 +79,32 @@
 
         <div class="cta">
           <a class="btn primary shine" href="projects.html">View Projects</a>
-          <a class="btn outline hero-overlay-btn" href="experience.html">Experience</a>
-          <a class="btn outline hero-overlay-btn" href="contact.html">Get in Touch</a>
+          <a class="btn outline" href="experience.html">Experience</a>
+          <a class="btn outline" href="contact.html">Get in Touch</a>
         </div>
 
-        <div class="hero-info hero-overlay-info">
+        <div class="hero-info">
           <span>📍 Tampa, FL</span>
           <a href="mailto:mythilykanagaraj21@gmail.com">✉ mythilykanagaraj21@gmail.com</a>
           <a href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           <a href="https://github.com/Mythily2110" target="_blank" rel="noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <!-- Profile — small vertical photo, right corner -->
+        <div class="profile-border-ring hero-photo-corner" data-aos="fade-left">
+          <div class="profile-card-hero profile-card-portrait">
+            <img src="profile.jpg" alt="Mythily Kanagaraj" class="profile-hero-img">
+            <div class="profile-hero-overlay">
+              <p class="profile-hero-name">Mythily Kanagaraj</p>
+              <p class="profile-hero-role">AI/ML Engineer · USF Research Assistant</p>
+              <div class="tags" style="margin:8px 0 0">
+                <span class="tag light">InnovateK12</span>
+                <span class="tag light">USF Behavioral AI Lab</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

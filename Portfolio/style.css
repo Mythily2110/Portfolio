@@ -262,7 +262,7 @@ p { color: var(--muted); line-height: 1.76 }
 .hero-wrap { position: relative }
 .hero {
   position: relative; z-index: 1; padding: 100px 0 76px;
-  display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center;
+  display: grid; grid-template-columns: 1.7fr 1fr; gap: 56px; align-items: center;
 }
 .hero-tag {
   display: inline-flex; align-items: center; gap: 8px;
@@ -282,60 +282,24 @@ p { color: var(--muted); line-height: 1.76 }
 .hero-info a, .hero-info span { color: var(--muted); display: flex; align-items: center; gap: 5px }
 .hero-info a:hover { color: var(--accent) }
 
-/* ── Hero — full-width photo overlay (editorial / magazine style) ── */
-.hero-overlay-wrap {
-  position: relative; width: 100%;
-  min-height: 92vh; display: flex; align-items: flex-end;
-  overflow: hidden;
+/* ── Hero — glass text panel (left) + small vertical photo (right) ── */
+.hero-glass-panel {
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: var(--radius);
+  padding: 36px 38px;
+  box-shadow: 0 12px 48px rgba(74,124,89,0.10);
 }
-.hero-overlay-photo { position: absolute; inset: 0; z-index: 0 }
-.hero-overlay-img {
-  width: 100%; height: 100%; object-fit: cover; object-position: center 18%;
-  display: block;
-}
-.hero-overlay-gradient {
-  position: absolute; inset: 0;
-  background: linear-gradient(to top,
-    rgba(20,28,18,0.86) 0%,
-    rgba(20,28,18,0.62) 35%,
-    rgba(20,28,18,0.22) 65%,
-    rgba(20,28,18,0.04) 100%);
-}
-.hero-overlay-vignette {
-  position: absolute; inset: 0; pointer-events: none;
-  box-shadow: inset 0 0 140px rgba(15,20,12,0.55);
-}
-.hero-overlay-content {
-  position: relative; z-index: 1; width: 100%;
-  padding: 64px 0 72px;
-}
-.hero-overlay-content .open-to-work {
-  background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.28);
-  color: #f3efe4; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-}
-.hero-overlay-content .hero-tag {
-  background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.24);
-  color: #f3efe4; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-}
-.hero-overlay-heading {
-  color: #fbf8f1; text-shadow: 0 4px 28px rgba(0,0,0,0.35);
-  max-width: 18ch;
-}
-.hero-overlay-lead {
-  color: rgba(255,255,255,0.88); text-shadow: 0 2px 16px rgba(0,0,0,0.3);
-  max-width: 56ch;
-}
-.hero-overlay-btn.btn.outline {
-  color: #fbf8f1; border-color: rgba(255,255,255,0.4);
-}
-.hero-overlay-btn.btn.outline:hover { color: #fff; border-color: rgba(255,255,255,0.7) }
-.hero-overlay-info a, .hero-overlay-info span { color: rgba(255,255,255,0.82) }
-.hero-overlay-info a:hover { color: #fff }
+.hero-photo-corner { max-width: 280px; margin-left: auto }
+.profile-card-portrait { aspect-ratio: 3 / 4 }
 
+@media (max-width: 900px) {
+  .hero-photo-corner { max-width: 220px; margin: 0 auto }
+}
 @media (max-width: 720px) {
-  .hero-overlay-wrap { min-height: 84vh; align-items: flex-end }
-  .hero-overlay-content { padding: 40px 0 48px }
-  .hero-overlay-heading { max-width: 100% }
+  .hero-glass-panel { padding: 28px 24px }
 }
 
 /* ── Profile Hero Card (homepage right) ─────────────────────── */
