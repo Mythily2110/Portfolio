@@ -282,29 +282,67 @@ p { color: var(--muted); line-height: 1.76 }
 .hero-info a, .hero-info span { color: var(--muted); display: flex; align-items: center; gap: 5px }
 .hero-info a:hover { color: var(--accent) }
 
-/* ── Hero — glass text panel (left) + small vertical photo (right) ── */
-.hero-glass-panel {
-  background: rgba(255,255,255,0.45);
-  backdrop-filter: blur(22px) saturate(160%);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
-  border: 1px solid rgba(255,255,255,0.5);
-  border-radius: var(--radius);
-  padding: 36px 38px;
-  box-shadow: 0 12px 48px rgba(74,124,89,0.10);
+/* ── Hero — bold dark editorial style ───────────────────────── */
+.hero-bold-wrap {
+  position: relative; width: 100%; min-height: 88vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; isolation: isolate;
 }
-.hero-photo-corner {
-  max-width: 280px; margin-left: auto; height: 100%; width: 100%;
-  display: flex; background: transparent; box-sizing: border-box;
+.hero-bold-photo { position: absolute; inset: 0; z-index: -2 }
+.hero-bold-img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
+  display: block; filter: saturate(0.9) contrast(1.04);
 }
-.profile-card-portrait { aspect-ratio: auto; width: 100%; height: 100% }
-.profile-card-portrait .profile-hero-overlay { padding-bottom: 28px }
+.hero-bold-scrim {
+  position: absolute; inset: 0; z-index: -1;
+  background:
+    linear-gradient(180deg, rgba(20,28,18,0.72) 0%, rgba(20,28,18,0.55) 40%, rgba(20,28,18,0.82) 100%);
+  box-shadow: inset 0 0 160px rgba(10,16,8,0.55);
+}
+.hero-bold-content { position: relative; z-index: 1; padding: 90px 0 }
+.hero-bold-kicker {
+  display: inline-flex; align-items: center; gap: 14px;
+  font-size: 12.5px; font-weight: 700; letter-spacing: .32em; text-transform: uppercase;
+  color: #e8c55c; margin-bottom: 22px;
+}
+.hero-bold-line { display: inline-block; width: 46px; height: 1px; background: rgba(232,197,92,0.55) }
+.hero-bold-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 900; letter-spacing: .04em; line-height: 1.04;
+  font-size: clamp(44px, 9vw, 104px);
+  color: #fbf8f1; text-shadow: 0 8px 40px rgba(0,0,0,0.45);
+  margin: 0;
+}
+.hero-bold-divider { display: flex; align-items: center; gap: 12px; margin: 26px 0 22px }
+.hero-bold-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: linear-gradient(135deg, #c9a84c, #8bc99a);
+  box-shadow: 0 0 10px rgba(201,168,76,0.7);
+}
+.hero-bold-lead {
+  font-size: 16.5px; line-height: 1.8; color: rgba(255,255,255,0.86);
+  max-width: 62ch; text-shadow: 0 2px 14px rgba(0,0,0,0.3);
+}
+.hero-bold-btn-solid.btn {
+  background: #fbf8f1; color: #1a3324; border-color: transparent;
+  box-shadow: 0 10px 34px rgba(0,0,0,0.22);
+}
+.hero-bold-btn-solid.btn:hover { background: #fff; transform: translateY(-2px) }
+.hero-bold-btn-solid.btn::before { display: none }
+.hero-bold-btn-outline.btn.outline {
+  color: #fbf8f1; border-color: rgba(255,255,255,0.45); background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.hero-bold-btn-outline.btn.outline:hover { color: #fff; border-color: rgba(255,255,255,0.8) }
+.hero-bold-info { justify-content: center; margin-top: 30px }
+.hero-bold-info a, .hero-bold-info span { color: rgba(255,255,255,0.78) }
+.hero-bold-info a:hover { color: #fff }
 
-@media (max-width: 900px) {
-  .hero-photo-corner { max-width: 240px; margin: 0 auto; height: 360px }
-}
 @media (max-width: 720px) {
-  .hero-glass-panel { padding: 28px 24px }
-  .hero-photo-corner { height: 320px }
+  .hero-bold-wrap { min-height: 80vh }
+  .hero-bold-content { padding: 64px 0 }
+  .hero-bold-kicker { letter-spacing: .22em; font-size: 11px }
+  .hero-bold-line { width: 28px }
 }
 
 /* ── Profile Hero Card (homepage right) ─────────────────────── */

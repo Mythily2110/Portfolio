@@ -42,69 +42,45 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- Hero — glass text panel left, vertical photo right -->
-  <div class="hero-wrap">
-    <canvas id="neural-canvas" aria-hidden="true"></canvas>
-
-    <!-- Animated gradient blobs -->
-    <div class="hero-glow-overlay" aria-hidden="true">
-      <div class="hero-glow-blob"></div>
-      <div class="hero-glow-blob"></div>
-      <div class="hero-glow-blob"></div>
+  <!-- Hero — bold dark editorial style -->
+  <div class="hero-bold-wrap">
+    <div class="hero-bold-photo">
+      <img src="profile.jpg" alt="Mythily Kanagaraj" class="hero-bold-img">
     </div>
+    <div class="hero-bold-scrim" aria-hidden="true"></div>
 
-    <section class="container hero">
-      <div class="reveal hero-glass-panel">
+    <section class="container hero-bold-content">
+      <div class="reveal" style="display:flex;flex-direction:column;align-items:center;text-align:center">
 
-        <!-- Open to Work badge -->
-        <div class="open-to-work">
-          <span class="otw-dot"></span>
-          Open to Work · AI/ML · Data Engineering
+        <div class="hero-bold-kicker">
+          <span class="hero-bold-line"></span>
+          AI/ML · Research · Data Engineering
+          <span class="hero-bold-line"></span>
         </div>
 
-        <div class="hero-tag">
-          <span class="dot"></span>
-          AI/ML Intern @ InnovateK12 · Research Assistant @ USF Behavioral AI Lab
+        <h1 class="hero-bold-title">MYTHILY<br>KANAGARAJ</h1>
+
+        <div class="hero-bold-divider">
+          <span class="hero-bold-line"></span>
+          <span class="hero-bold-dot"></span>
+          <span class="hero-bold-line"></span>
         </div>
 
-        <h1 class="h1">
-          <span id="typed-line"></span><span class="typewriter"></span>
-        </h1>
-
-        <p class="lead" style="margin-top:20px">
-          AI/ML Engineer currently interning at InnovateK12 and serving as a Research Assistant at USF's Behavioral AI Lab.
-          Pursuing an M.S. in Artificial Intelligence &amp; Business Analytics at the University of South Florida.
-          Previously a Data Engineer at Infosys with 3+ years of experience building cloud-native pipelines on AWS and Azure.
+        <p class="hero-bold-lead">
+          AI/ML Engineer interning at <strong>InnovateK12</strong> and Research Assistant at
+          <strong>USF's Behavioral AI Lab</strong> — building intelligent systems that turn data into human insight.
         </p>
 
-        <div class="cta">
-          <a class="btn primary shine" href="projects.html">View Projects</a>
-          <a class="btn outline" href="experience.html">Experience</a>
-          <a class="btn outline" href="contact.html">Get in Touch</a>
+        <div class="cta" style="justify-content:center">
+          <a class="btn hero-bold-btn-solid" href="projects.html">View Projects</a>
+          <a class="btn hero-bold-btn-outline" href="contact.html">Get In Touch →</a>
         </div>
 
-        <div class="hero-info">
+        <div class="hero-info hero-bold-info">
           <span>📍 Tampa, FL</span>
           <a href="mailto:mythilykanagaraj21@gmail.com">✉ mythilykanagaraj21@gmail.com</a>
           <a href="https://www.linkedin.com/in/mythily-kanagaraj-474b37200/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
           <a href="https://github.com/Mythily2110" target="_blank" rel="noreferrer">GitHub ↗</a>
-        </div>
-      </div>
-
-      <div class="reveal reveal-delay-2">
-        <!-- Profile — small vertical photo, right corner -->
-        <div class="profile-border-ring hero-photo-corner" data-aos="fade-left">
-          <div class="profile-card-hero profile-card-portrait">
-            <img src="profile.jpg" alt="Mythily Kanagaraj" class="profile-hero-img">
-            <div class="profile-hero-overlay">
-              <p class="profile-hero-name">Mythily Kanagaraj</p>
-              <p class="profile-hero-role">AI/ML Engineer · USF Research Assistant</p>
-              <div class="tags" style="margin:8px 0 0">
-                <span class="tag light">InnovateK12</span>
-                <span class="tag light">USF Behavioral AI Lab</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -166,25 +142,6 @@
     </div>
   </footer>
 
-  <script>
-    /* ── Typewriter ── */
-    const lines = [
-      'Building intelligent AI/ML systems.',
-      'Researching behavioral AI patterns.',
-      'Turning data into human insight.',
-      'Engineering NLP pipelines at scale.',
-    ];
-    let li = 0, ci = 0, deleting = false;
-    const el = document.getElementById('typed-line');
-    function type() {
-      const word = lines[li];
-      el.textContent = deleting ? word.slice(0, ci--) : word.slice(0, ci++);
-      if (!deleting && ci > word.length) { deleting = true; setTimeout(type, 1400); return; }
-      if (deleting && ci < 0) { deleting = false; li = (li + 1) % lines.length; ci = 0; setTimeout(type, 400); return; }
-      setTimeout(type, deleting ? 38 : 68);
-    }
-    type();
-  </script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="site.js"></script>
   <script src="neural.js"></script>
