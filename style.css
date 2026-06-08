@@ -99,7 +99,7 @@ footer { position: relative; z-index: 1 }
 .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; gap: 16px }
 .brand {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: 21px; font-weight: 800; letter-spacing: -.2px;
+  font-size: 21px; font-weight: 600; letter-spacing: -.2px;
   background: linear-gradient(90deg, var(--accent), var(--accent2));
   -webkit-background-clip: text; background-clip: text; color: transparent;
   white-space: nowrap;
@@ -296,6 +296,7 @@ p { color: var(--muted); line-height: 1.76 }
 .hero-split2-img {
   width: 100%; height: 100%; object-fit: cover; object-position: top center;
   display: block; transform: scale(0.86); transform-origin: top center;
+  filter: sepia(0.1) saturate(1.05) brightness(1.04) hue-rotate(-6deg);
 }
 .hero-split2-fade {
   position: absolute; inset: 0;
