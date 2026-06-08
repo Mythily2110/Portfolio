@@ -295,68 +295,78 @@ p { color: var(--muted); line-height: 1.76 }
 }
 .hero-split2-img {
   width: 100%; height: 100%; object-fit: cover; object-position: top center;
-  display: block;
+  display: block; transform: scale(0.86); transform-origin: top center;
 }
 .hero-split2-fade {
   position: absolute; inset: 0;
-  background: linear-gradient(90deg, rgba(248,246,241,0) 60%, var(--bg) 100%);
+  background: var(--bg);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, transparent 58%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, transparent 58%, #000 100%);
   pointer-events: none;
 }
 .hero-split2-text {
   display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
-  gap: 6px;
+  gap: 8px;
   padding: 72px 64px;
 }
 .hero-split2-text .open-to-work,
 .hero-split2-text .hero-tag {
   align-self: flex-start; width: auto; max-width: max-content;
-  font-size: 13px; padding: 6px 16px;
-  background: #faf8f3; border: 1px solid rgba(74,124,89,0.4); color: #3a5f44;
-  margin-bottom: 8px;
+  font-size: 12px; padding: 5px 14px;
+  background: #faf8f3; border: 1px solid rgba(74,124,89,0.32); color: #3a5f44;
+  margin-bottom: 0;
 }
+.hero-split2-text .open-to-work { margin-bottom: 8px; }
 .hero-split2-title {
-  font-size: clamp(32px, 4.2vw, 52px) !important;
-  line-height: 1.2 !important;
-  letter-spacing: 0.5px !important;
-  font-weight: 800;
+  font-size: clamp(28px, 3.4vw, 42px) !important;
+  line-height: 1.15 !important;
+  letter-spacing: 0.3px !important;
+  font-weight: 700;
+  color: #1a1a1a;
 }
 .hero-split2-kicker {
-  font-size: 11px; letter-spacing: 3px;
+  font-size: 10px !important; letter-spacing: 4px !important;
 }
 .hero-split2-quote {
-  margin: 22px 0 0; padding: 16px 22px;
+  margin: 20px 0 0; padding: 16px 22px;
   border-left: 3px solid var(--accent);
-  background: rgba(74,124,89,0.07);
-  font-size: 16px; font-style: italic; line-height: 1.7;
-  color: var(--text); max-width: 62ch;
+  background: #f9f7f2;
+  font-size: 15px; font-style: italic; line-height: 1.8;
+  color: #444; max-width: 60ch;
 }
 .hero-split2-desc {
-  font-size: 15px !important; line-height: 1.7 !important; color: #333 !important;
+  font-size: 14.5px !important; line-height: 1.8 !important; color: #555 !important;
 }
 .hero-split2-stats {
-  display: flex; gap: 40px; flex-wrap: wrap;
-  margin-top: 34px; padding-top: 26px;
+  display: flex; gap: 0; flex-wrap: wrap;
+  margin-top: 32px; padding-top: 24px;
   border-top: 1px solid var(--border);
 }
+.hero-split2-stat {
+  padding: 0 32px; border-right: 1px solid var(--border);
+}
+.hero-split2-stat:first-child { padding-left: 0 }
+.hero-split2-stat:last-child { border-right: none }
 .hero-split2-stat-num {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 28px; font-weight: 800;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-size: 36px; font-weight: 800; color: #1a1a1a;
 }
 .hero-split2-stat-label {
-  font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-  color: var(--muted); margin-top: 4px;
+  font-size: 10px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); margin-top: 4px;
 }
 
 @media (max-width: 880px) {
   .hero-split2-wrap { grid-template-columns: 1fr; min-height: 0 }
   .hero-split2-photo { min-height: 360px }
-  .hero-split2-fade { background: linear-gradient(180deg, rgba(248,246,241,0) 60%, var(--bg) 100%) }
+  .hero-split2-fade {
+    -webkit-mask-image: linear-gradient(180deg, transparent 0%, transparent 58%, #000 100%);
+    mask-image: linear-gradient(180deg, transparent 0%, transparent 58%, #000 100%);
+  }
   .hero-split2-text { padding: 48px 28px; align-items: center; text-align: center }
   .hero-split2-text .open-to-work,
   .hero-split2-text .hero-tag { align-self: center }
   .hero-split2-quote, .hero-split2-desc { text-align: left }
+  .hero-split2-stat { border-right: none; padding: 0 16px }
   .hero-split2-stats { justify-content: center }
 }
 
